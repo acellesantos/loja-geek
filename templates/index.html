@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo Geek — Catálogo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Estilização limpa e centralizada para o Modal */
+        dialog.product-dialog {
+            padding: 0;
+            border: none;
+            border-radius: 20px;
+            max-width: 920px;
+            width: 90vw;
+            background: #fff;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            
+            /* ADICIONE ESTAS 3 LINHAS PARA CENTRALIZAR PERFEITAMENTE */
+            margin: auto;
+            position: fixed;
+            inset: 0;
+        }
+
+        dialog.product-dialog::backdrop {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .modal-container {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            height: 100%; /* Garante que o grid ocupe toda a altura interna */
+            position: relative;
+        }
+        @media (max-width: 768px) {
+            .modal-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#inicio"><b>AG</b><span>ACERVO GEEK</span></a>
+        <div style="display: flex; gap: 15px; align-items: center;">
+            <a href="/admin" style="color: #b17d12; font-weight: bold; text-decoration: none; font-size: 14px;">+ Painel Admin</a>
+            <a class="nav-link" href="#catalogo">Ver coleção ↓</a>
+        </div>
+    </header>
+    <main>
+        <section style="display: flex; flex-wrap: wrap; background-color: #111111; margin: 0; padding: 0; align-items: stretch;">
+    
+            <!-- Lado Esquerdo: Textos alinhados à esquerda com novos pesos e escalas -->
+            <div style="flex: 0 0 50%; display: flex; flex-direction: column; justify-content: center; padding: 4rem 2rem; box-sizing: border-box; min-width: 300px;">
+                <div style="max-width: 600px; margin: 0 auto; text-align: left;">
+                    
+                    <!-- Sobrancelha (Eyebrow) maior e em negrito -->
+                    <span class="eyebrow" style="margin-bottom: 10px; display: block; font-weight: 800; font-size: 0.75rem; letter-spacing: 3px;">PEÇAS DE COLECIONADOR</span>
+                    
+                    <!-- Título esticado verticalmente e sem negrito (font-weight: 400) -->
+                    <h1 style="margin: 0 0 20px 0; font-size: 4rem; font-weight: 400; line-height: 1; color: #ffffff; letter-spacing: -1px; transform: scaleY(1.0); transform-origin: top left; display: block;">Uma coleção inteira procurando novas prateleiras.</h1>
+                    <p style="margin: 0 0 20px 0; font-size: 1.25rem; color: #d1d5db; line-height: 1.5;">Funkos, action figures, estátuas e edições especiais de universos inesquecíveis.</p>
+                    <a class="button gold" href="#catalogo" style="display: inline-block; padding: 10px 24px; font-size: 1rem;">Explorar o acervo ↘</a>
+                </div>
+            </div>
+
+            <!-- Lado Direito: Foto mais alta -->
+            <div style="flex: 1 1 50%; min-height: 545px; min-width: 320px; background-image: url('{{ url_for('static', filename='img/prateleira_real.jpg') }}'); background-size: cover; background-position: center;">
+            </div>
+
+        </section>
+        
+        <section class="catalog" id="catalogo">
+            <div class="section-title">
+                <div>
+                    <span class="eyebrow dark">CATÁLOGO</span>
+                    <h2>Encontre sua próxima peça</h2>
+                </div>
+                <p>{{ produtos | length }} itens encontrados</p>
+            </div>
+
+            <div class="catalog-tools">
+                <label class="search-field">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+                    <span class="sr-only">Buscar no catálogo</span>
+                    <input placeholder="Buscar personagem, categoria ou código…" value="">
+                </label>
+            </div>
+            
+            <!-- Grid único e limpo -->
+            <div class="grid">
+                <!-- Produtos dinâmicos vindos do Excel/Flask -->
+                {% for produto in produtos %}
+                    {% set nome = produto['Nome do Produto'] %}
+                    {% set preco = produto['Preço (R$)']|string %}
+                    {% set cat = produto['Categoria'] if produto['Categoria'] is not none and produto['Categoria']|string != 'nan' else 'GEEK' %}
+                    {% set franquia = produto['Franquia'] if produto['Franquia'] is not none and produto['Franquia']|string != 'nan' else '' %}
+                    {% set fotos_json = produto['fotos_lista'] | tojson %}
+                    {% set foto_capa = produto['fotos_lista'][0] %}
+                    {% set codigo = produto['Código']|string if produto['Código'] is not none and produto['Código']|string != 'nan' else '' %}
+                    {% set estado = produto['Estado'] if produto['Estado'] is not none and produto['Estado']|string != 'nan' else 'Novo' %}
+                    {% set condicao = produto['Condição da Caixa'] if produto['Condição da Caixa'] is not none and produto['Condição da Caixa']|string != 'nan' else 'Caixa em bom estado de conservação.' %}
+
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes({{ nome | tojson }}, {{ preco | tojson }}, {{ cat | tojson }}, {{ franquia | tojson }}, {{ fotos_json }}, {{ codigo | tojson }}, {{ estado | tojson }}, {{ condicao | tojson }})'>
+                        <img alt="{{ nome }}" src="{{ url_for('static', filename='img/' + foto_capa) }}" style="object-fit: contain; width: 100%; height: 100%;">
+                    </div>
+                    <div class="card-body">
+                        <!-- As duas classificações lado a lado (Franquia e Categoria) -->
+                        <div class="card-meta-top" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                            <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #926d24;">{{ franquia }}</span>
+                            <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #666;">{{ cat }}</span>
+                        </div>
+
+                        <!-- Título do Produto -->
+                        <h3 class="card-title" style="cursor: pointer; font-size: 18px; font-weight: 800; margin: 0 0 4px 0;" onclick='abrirDetalhes({{ nome | tojson }}, {{ preco | tojson }}, {{ cat | tojson }}, {{ franquia | tojson }}, {{ fotos_json }}, {{ codigo | tojson }}, {{ estado | tojson }}, {{ condicao | tojson }})'>{{ nome }}</h3>
+                        
+                        <!-- Código do produto logo abaixo do título -->
+                        {% if codigo %}
+                        <span class="card-code" style="font-size: 12px; color: #888; margin-bottom: 12px; display: block;">Código: {{ codigo }}</span>
+                        {% endif %}
+
+                        <div class="card-foot">
+                            <strong>{{ preco if preco.startswith('R$') else 'R$ ' + preco }}</strong>
+                            <button class="details" onclick='abrirDetalhes({{ nome | tojson }}, {{ preco | tojson }}, {{ cat | tojson }}, {{ franquia | tojson }}, {{ fotos_json }}, {{ codigo | tojson }}, {{ estado | tojson }}, {{ condicao | tojson }})'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+            <!-- BOTÕES DE PAGINAÇÃO -->
+            <div style="display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 40px;">
+                {% if page > 1 %}
+                    <a href="{{ url_for('index', page=page-1) }}" style="padding: 10px 20px; background: #111; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px;">← Anterior</a>
+                {% endif %}
+
+                <span style="font-size: 14px; font-weight: 600; color: #555;">Página {{ page }} de {{ total_pages }}</span>
+
+                {% if page < total_pages %}
+                    <a href="{{ url_for('index', page=page+1) }}" style="padding: 10px 20px; background: #111; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px;">Próxima →</a>
+                {% endif %}
+            </div>
+
+        </section>
+    </main>
+    
+    <!-- MODAL DE DETALHES -->
+    <!-- Adicionado padding: 0 e dimensões absolutas direto na tag para anular o padrão do navegador -->
+    <dialog id="modalDetalhes" class="product-dialog" style="padding: 0; border: none; border-radius: 20px; max-width: 920px; width: 90vw; background: #fff; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); overflow: hidden; margin: auto; position: fixed; inset: 0;">
+        
+        <button onclick="fecharDetalhes()" style="position: absolute; top: 16px; right: 16px; z-index: 20; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-weight: normal; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #111; transition: background 0.2s;">✕</button>
+        
+        <!-- Container usando Flexbox para garantir que as duas colunas tenham exatamente a mesma altura -->
+        <div class="modal-container" style="display: flex; flex-wrap: wrap; width: 100%; height: 100%; margin: 0; padding: 0;">
+            
+            <!-- Lado Esquerdo: Fundo Bege esticado 100% da altura e foto maior (420px) -->
+            <div style="flex: 1.5; min-width: 300px; height: 100%; background: #f7f6f2; padding: 30px 40px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-sizing: border-box;">
+                <div id="modalImagemContainer" style="width: 100%; height: 520px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; cursor: zoom-in;">
+                    <button id="btnAnterior" onclick="mudarFoto(-1)" style="position: absolute; left: 0; background: rgba(0,0,0,0.15); border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; color: #111; z-index: 10; transition: background 0.2s;">‹</button>
+                    
+                    <img id="modalImagemPrincipal" src="" alt="Produto" style="max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.1s ease-out;">
+                    
+                    <button id="btnProximo" onclick="mudarFoto(1)" style="position: absolute; right: 0; background: rgba(0,0,0,0.15); border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; color: #111; z-index: 10; transition: background 0.2s;">›</button>
+                </div>
+                
+                <div id="modalMiniaturas" style="display: flex; gap: 10px; margin-top: 20px; overflow-x: auto; max-width: 100%; padding-bottom: 8px;"></div>
+            </div>
+
+            <!-- Lado Direito: Textos Maiores e Legíveis com Botão Colado no Fundo -->
+            <div style="flex: 1; min-width: 300px; background: #fff; padding: 45px 40px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+               <div>
+                   <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+                        <!-- Badge do Franquia (ex: Marvel) -->
+                        <span id="modalBadgeFranquia" style="background: #fdf8eb; color: #926d24; font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;"></span>
+                        
+                        <!-- Badge da Categoria (ex: Funko Pop!) -->
+                        <span id="modalBadgeCat" style="background: #fdf8eb; color: #926d24; font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;"></span>
+                    </div>
+                   
+                   <!-- Título Maior (36px) -->
+                   <h2 id="modalNome" style="font-size: 36px; font-weight: 600; color: #111; line-height: 1.1; margin: 0 0 8px 0; letter-spacing: -0.5px;">Nome do Produto</h2>
+                   <p id="modalCodigo" style="font-size: 14px; color: #777; margin: 0 0 20px 0;"></p>
+                   
+                   <!-- Preço Maior (32px) -->
+                   <div id="modalPreco" style="font-size: 24px; font-weight: 800; color: #111; margin-bottom: 28px;">R$ 0,00</div>
+                   
+                   <!-- Status e Estado Maiores (12px labels, 16px dados) -->
+                   <div style="border-top: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea; padding: 18px 0; margin-bottom: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                       <div>
+                           <span style="display: block; font-size: 12px; font-weight: 700; color: #926d24; text-transform: uppercase; margin-bottom: 4px; letter-spacing: 0.5px;">Status</span>
+                           <span style="font-size: 16px; font-weight: 500; color: #222;">Disponível</span>
+                       </div>
+                       <div>
+                           <span style="display: block; font-size: 12px; font-weight: 700; color: #926d24; text-transform: uppercase; margin-bottom: 4px; letter-spacing: 0.5px;">Estado</span>
+                           <span id="modalEstado" style="font-size: 16px; font-weight: 500; color: #222;">Novo</span>
+                       </div>
+                   </div>
+                   
+                   <!-- Condição da Caixa Maior (16px) -->
+                   <div style="margin-bottom: 24px;">
+                       <span style="display: block; font-size: 12px; font-weight: 700; color: #926d24; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">Condição da caixa</span>
+                       <p id="modalCondicao" style="font-size: 16px; color: #333; margin: 0; line-height: 1.5; font-weight: 400;"></p>
+                   </div>
+               </div>
+               
+               <!-- Botão de Interesse com fonte de 16px -->
+               <div style="margin-top: auto;">
+                   <button id="btnTenhoInteresse" style="background: #111; color: #fff; border: none; border-radius: 8px; width: 100%; height: 54px; font-size: 16px; font-weight: 600; cursor: pointer; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">Tenho Interesse</button>
+               </div>
+            </div>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="brand"><b>AG</b><span>ACERVO GEEK</span></div>
+        <p>Catálogo de colecionáveis • 2026</p>
+    </footer>
+
+    <!-- Configura o caminho das imagens para o Flask e carrega o script externo unificado -->
+    <script>
+        window.caminhoImagens = "{{ url_for('static', filename='img/') }}";
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

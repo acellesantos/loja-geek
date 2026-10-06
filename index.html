@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo Geek — Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        dialog.product-dialog {
+            padding: 0;
+            border: none;
+            border-radius: 20px;
+            max-width: 920px;
+            width: 90vw;
+            background: #fff;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            margin: auto;
+            position: fixed;
+            inset: 0;
+        }
+        dialog.product-dialog::backdrop {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .modal-container {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            min-height: 500px;
+            position: relative;
+        }
+        @media (max-width: 768px) {
+            .modal-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#inicio"><b>AG</b><span>ACERVO GEEK</span></a>
+        <a class="nav-link" href="#catalogo">Ver coleção ↓</a>
+    </header>
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-copy">
+                <span class="eyebrow">PEÇAS DE COLECIONADOR</span>
+                <h1>Uma coleção inteira procurando novas prateleiras.</h1>
+                <p>Funkos, action figures, estátuas e edições especiais de universos inesquecíveis.</p>
+                <a class="button gold" href="#catalogo">Explorar o acervo ↘</a>
+            </div>
+            <div class="hero-photo" role="img" aria-label="Coleção de itens geek"></div>
+        </section>
+        
+        <section class="catalog" id="catalogo">
+            <div class="section-title">
+                <div>
+                    <span class="eyebrow dark">CATÁLOGO</span>
+                    <h2>Encontre sua próxima peça</h2>
+                </div>
+                <p>59 itens encontrados</p>
+            </div>
+
+            <div class="catalog-tools">
+                <label class="search-field">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+                    <span class="sr-only">Buscar no catálogo</span>
+                    <input placeholder="Buscar personagem, universo ou código…" value="">
+                </label>
+            </div>
+            
+            <div class="grid">
+
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Alien Queen #346", "R$ 699", "POP! MOVIES", ["ALIEN-QUEEN_346 (1).jpg", "ALIEN-QUEEN_346 (2).jpg", "ALIEN-QUEEN_346 (3).jpg", "ALIEN-QUEEN_346 (4).jpg", "ALIEN-QUEEN_346 (5).jpg", "ALIEN-QUEEN_346 (6).jpg"], "F-346", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Alien Queen #346" src="img/ALIEN-QUEEN_346 (1).jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! MOVIES</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Alien Queen #346", "R$ 699", "POP! MOVIES", ["ALIEN-QUEEN_346 (1).jpg", "ALIEN-QUEEN_346 (2).jpg", "ALIEN-QUEEN_346 (3).jpg", "ALIEN-QUEEN_346 (4).jpg", "ALIEN-QUEEN_346 (5).jpg", "ALIEN-QUEEN_346 (6).jpg"], "F-346", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Alien Queen #346</h3>
+                        <div class="card-foot">
+                            <strong>R$ 699</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Alien Queen #346", "R$ 699", "POP! MOVIES", ["ALIEN-QUEEN_346 (1).jpg", "ALIEN-QUEEN_346 (2).jpg", "ALIEN-QUEEN_346 (3).jpg", "ALIEN-QUEEN_346 (4).jpg", "ALIEN-QUEEN_346 (5).jpg", "ALIEN-QUEEN_346 (6).jpg"], "F-346", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Marvel Collector Coprs - X-Men - Angel #424", "R$ 319", "POP! X-MEN", ["ANGEL_424(1).jpg", "ANGEL_424(2).jpg", "ANGEL_424(3).jpg", "ANGEL_424(4).jpg", "ANGEL_424(5).jpg"], "F-424", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Marvel Collector Coprs - X-Men - Angel #424" src="img/ANGEL_424(1).jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! X-MEN</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Marvel Collector Coprs - X-Men - Angel #424", "R$ 319", "POP! X-MEN", ["ANGEL_424(1).jpg", "ANGEL_424(2).jpg", "ANGEL_424(3).jpg", "ANGEL_424(4).jpg", "ANGEL_424(5).jpg"], "F-424", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Marvel Collector Coprs - X-Men - Angel #424</h3>
+                        <div class="card-foot">
+                            <strong>R$ 319</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Marvel Collector Coprs - X-Men - Angel #424", "R$ 319", "POP! X-MEN", ["ANGEL_424(1).jpg", "ANGEL_424(2).jpg", "ANGEL_424(3).jpg", "ANGEL_424(4).jpg", "ANGEL_424(5).jpg"], "F-424", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Vynl Aquaman + Black Manta 2Pack", "R$ 206,90", "VYNL.", ["AQUAMAN_BLACK-MANTA.jpg", "AQUAMAN_BLACK-MANTA (1).jpg", "AQUAMAN_BLACK-MANTA (2).jpg", "AQUAMAN_BLACK-MANTA (3).jpg", "AQUAMAN_BLACK-MANTA (4).jpg", "AQUAMAN_BLACK-MANTA (5).jpg"], "V-ABM", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Vynl Aquaman + Black Manta 2Pack" src="img/AQUAMAN_BLACK-MANTA.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>VYNL.</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Vynl Aquaman + Black Manta 2Pack", "R$ 206,90", "VYNL.", ["AQUAMAN_BLACK-MANTA.jpg", "AQUAMAN_BLACK-MANTA (1).jpg", "AQUAMAN_BLACK-MANTA (2).jpg", "AQUAMAN_BLACK-MANTA (3).jpg", "AQUAMAN_BLACK-MANTA (4).jpg", "AQUAMAN_BLACK-MANTA (5).jpg"], "V-ABM", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Vynl Aquaman + Black Manta 2Pack</h3>
+                        <div class="card-foot">
+                            <strong>R$ 206,90</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Vynl Aquaman + Black Manta 2Pack", "R$ 206,90", "VYNL.", ["AQUAMAN_BLACK-MANTA.jpg", "AQUAMAN_BLACK-MANTA (1).jpg", "AQUAMAN_BLACK-MANTA (2).jpg", "AQUAMAN_BLACK-MANTA (3).jpg", "AQUAMAN_BLACK-MANTA (4).jpg", "AQUAMAN_BLACK-MANTA (5).jpg"], "V-ABM", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Archie Andrews HOT TOPIC #586", "R$ 160", "POP! TELEVISION", ["ARCHIE_ANDREWS_586(1).jpg", "ARCHIE_ANDREWS_586(2).jpg", "ARCHIE_ANDREWS_586(3).jpg", "ARCHIE_ANDREWS_586(4).jpg", "ARCHIE_ANDREWS_586(5).jpg"], "F-586", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Archie Andrews HOT TOPIC #586" src="img/ARCHIE_ANDREWS_586(1).jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! TELEVISION</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Archie Andrews HOT TOPIC #586", "R$ 160", "POP! TELEVISION", ["ARCHIE_ANDREWS_586(1).jpg", "ARCHIE_ANDREWS_586(2).jpg", "ARCHIE_ANDREWS_586(3).jpg", "ARCHIE_ANDREWS_586(4).jpg", "ARCHIE_ANDREWS_586(5).jpg"], "F-586", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Archie Andrews HOT TOPIC #586</h3>
+                        <div class="card-foot">
+                            <strong>R$ 160</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Archie Andrews HOT TOPIC #586", "R$ 160", "POP! TELEVISION", ["ARCHIE_ANDREWS_586(1).jpg", "ARCHIE_ANDREWS_586(2).jpg", "ARCHIE_ANDREWS_586(3).jpg", "ARCHIE_ANDREWS_586(4).jpg", "ARCHIE_ANDREWS_586(5).jpg"], "F-586", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Disney Bambi #351 Exclusive", "R$ 399", "POP!", ["BAMBI_351.jpg", "BAMBI_351 (2).jpg", "BAMBI_351 (3).jpg", "BAMBI_351 (4).jpg", "BAMBI_351 (5).jpg"], "F-351", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Disney Bambi #351 Exclusive" src="img/BAMBI_351.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Disney Bambi #351 Exclusive", "R$ 399", "POP!", ["BAMBI_351.jpg", "BAMBI_351 (2).jpg", "BAMBI_351 (3).jpg", "BAMBI_351 (4).jpg", "BAMBI_351 (5).jpg"], "F-351", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Disney Bambi #351 Exclusive</h3>
+                        <div class="card-foot">
+                            <strong>R$ 399</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Disney Bambi #351 Exclusive", "R$ 399", "POP!", ["BAMBI_351.jpg", "BAMBI_351 (2).jpg", "BAMBI_351 (3).jpg", "BAMBI_351 (4).jpg", "BAMBI_351 (5).jpg"], "F-351", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! DC Super Heroes - Bane 218 (DC Legion Of Collectors) #218", "R$ 299", "POP! HEROES", ["BANE_218 (1).jpg", "BANE_218 (2).jpg", "BANE_218 (3).jpg", "BANE_218 (4).jpg", "BANE_218 (5).jpg", "BANE_218 (6).jpg"], "F-218", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! DC Super Heroes - Bane 218 (DC Legion Of Collectors) #218" src="img/BANE_218 (1).jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! HEROES</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! DC Super Heroes - Bane 218 (DC Legion Of Collectors) #218", "R$ 299", "POP! HEROES", ["BANE_218 (1).jpg", "BANE_218 (2).jpg", "BANE_218 (3).jpg", "BANE_218 (4).jpg", "BANE_218 (5).jpg", "BANE_218 (6).jpg"], "F-218", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! DC Super Heroes - Bane 218 (DC Legion Of Collectors) #218</h3>
+                        <div class="card-foot">
+                            <strong>R$ 299</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! DC Super Heroes - Bane 218 (DC Legion Of Collectors) #218", "R$ 299", "POP! HEROES", ["BANE_218 (1).jpg", "BANE_218 (2).jpg", "BANE_218 (3).jpg", "BANE_218 (4).jpg", "BANE_218 (5).jpg", "BANE_218 (6).jpg"], "F-218", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! GOT Beric Dondarrion #65 Exclusive", "R$ 399", "POP! TELEVISION", ["BARIC_DONDARRION_65 (1).jpg", "BARIC_DONDARRION_65 (2).jpg", "BARIC_DONDARRION_65 (3).jpg", "BARIC_DONDARRION_65 (4).jpg", "BARIC_DONDARRION_65 (5).jpg", "BARIC_DONDARRION_65 (6).jpg"], "F-065", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! GOT Beric Dondarrion #65 Exclusive" src="img/BARIC_DONDARRION_65 (1).jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! TELEVISION</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! GOT Beric Dondarrion #65 Exclusive", "R$ 399", "POP! TELEVISION", ["BARIC_DONDARRION_65 (1).jpg", "BARIC_DONDARRION_65 (2).jpg", "BARIC_DONDARRION_65 (3).jpg", "BARIC_DONDARRION_65 (4).jpg", "BARIC_DONDARRION_65 (5).jpg", "BARIC_DONDARRION_65 (6).jpg"], "F-065", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! GOT Beric Dondarrion #65 Exclusive</h3>
+                        <div class="card-foot">
+                            <strong>R$ 399</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! GOT Beric Dondarrion #65 Exclusive", "R$ 399", "POP! TELEVISION", ["BARIC_DONDARRION_65 (1).jpg", "BARIC_DONDARRION_65 (2).jpg", "BARIC_DONDARRION_65 (3).jpg", "BARIC_DONDARRION_65 (4).jpg", "BARIC_DONDARRION_65 (5).jpg", "BARIC_DONDARRION_65 (6).jpg"], "F-065", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Vynl DC Comics Batgirl + Poison Ivy 2017 SDCC Summer", "R$ 350", "VYNL.", ["BATGIRL_POISON-IVY(1).jpg", "BATGIRL_POISON-IVY(2).jpg", "BATGIRL_POISON-IVY(3).jpg", "BATGIRL_POISON-IVY(4).jpg", "BATGIRL_POISON-IVY(5).jpg", "BATGIRL_POISON-IVY(6).jpg"], "V-BPI", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Vynl DC Comics Batgirl + Poison Ivy 2017 SDCC Summer" src="img/BATGIRL_POISON-IVY(1).jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>VYNL.</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Vynl DC Comics Batgirl + Poison Ivy 2017 SDCC Summer", "R$ 350", "VYNL.", ["BATGIRL_POISON-IVY(1).jpg", "BATGIRL_POISON-IVY(2).jpg", "BATGIRL_POISON-IVY(3).jpg", "BATGIRL_POISON-IVY(4).jpg", "BATGIRL_POISON-IVY(5).jpg", "BATGIRL_POISON-IVY(6).jpg"], "V-BPI", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Vynl DC Comics Batgirl + Poison Ivy 2017 SDCC Summer</h3>
+                        <div class="card-foot">
+                            <strong>R$ 350</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Vynl DC Comics Batgirl + Poison Ivy 2017 SDCC Summer", "R$ 350", "VYNL.", ["BATGIRL_POISON-IVY(1).jpg", "BATGIRL_POISON-IVY(2).jpg", "BATGIRL_POISON-IVY(3).jpg", "BATGIRL_POISON-IVY(4).jpg", "BATGIRL_POISON-IVY(5).jpg", "BATGIRL_POISON-IVY(6).jpg"], "V-BPI", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Black Widow - Avengers Endgame #454", "R$ 299", "POP!", ["BLACK_WIDOW_454(1).jpg", "BLACK_WIDOW_454(2).jpg", "BLACK_WIDOW_454(3).jpg", "BLACK_WIDOW_454(4).jpg"], "F-454", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Black Widow - Avengers Endgame #454" src="img/BLACK_WIDOW_454(1).jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Black Widow - Avengers Endgame #454", "R$ 299", "POP!", ["BLACK_WIDOW_454(1).jpg", "BLACK_WIDOW_454(2).jpg", "BLACK_WIDOW_454(3).jpg", "BLACK_WIDOW_454(4).jpg"], "F-454", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Black Widow - Avengers Endgame #454</h3>
+                        <div class="card-foot">
+                            <strong>R$ 299</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Black Widow - Avengers Endgame #454", "R$ 299", "POP!", ["BLACK_WIDOW_454(1).jpg", "BLACK_WIDOW_454(2).jpg", "BLACK_WIDOW_454(3).jpg", "BLACK_WIDOW_454(4).jpg"], "F-454", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Animation Blueberry Muffin & Cheesecake VAULTED #135", "R$ 899", "POP!", ["Blueberry Muffin + Cheesecake #135.jpg", "Blueberry Muffin + Cheesecake #135 (1).jpg", "Blueberry Muffin + Cheesecake #135 (2).jpg", "Blueberry Muffin + Cheesecake #135 (3).jpg", "Blueberry Muffin + Cheesecake #135 (4).jpg", "Blueberry Muffin + Cheesecake #135 (5).jpg"], "F-135", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Animation Blueberry Muffin & Cheesecake VAULTED #135" src="img/Blueberry Muffin + Cheesecake #135.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Animation Blueberry Muffin & Cheesecake VAULTED #135", "R$ 899", "POP!", ["Blueberry Muffin + Cheesecake #135.jpg", "Blueberry Muffin + Cheesecake #135 (1).jpg", "Blueberry Muffin + Cheesecake #135 (2).jpg", "Blueberry Muffin + Cheesecake #135 (3).jpg", "Blueberry Muffin + Cheesecake #135 (4).jpg", "Blueberry Muffin + Cheesecake #135 (5).jpg"], "F-135", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Animation Blueberry Muffin & Cheesecake VAULTED #135</h3>
+                        <div class="card-foot">
+                            <strong>R$ 899</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Animation Blueberry Muffin & Cheesecake VAULTED #135", "R$ 899", "POP!", ["Blueberry Muffin + Cheesecake #135.jpg", "Blueberry Muffin + Cheesecake #135 (1).jpg", "Blueberry Muffin + Cheesecake #135 (2).jpg", "Blueberry Muffin + Cheesecake #135 (3).jpg", "Blueberry Muffin + Cheesecake #135 (4).jpg", "Blueberry Muffin + Cheesecake #135 (5).jpg"], "F-135", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Captain Marvel Carol Danvers On Motorcycle VAULTED #57", "R$ 354", "POP! RIDES", ["CAROL_DANVERS_ON_MOTORCYCLE_57.jpg", "CAROL_DANVERS_ON_MOTORCYCLE_57(1).jpg", "CAROL_DANVERS_ON_MOTORCYCLE_57(2).jpg", "CAROL_DANVERS_ON_MOTORCYCLE_57(3).jpg"], "F-057", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Captain Marvel Carol Danvers On Motorcycle VAULTED #57" src="img/CAROL_DANVERS_ON_MOTORCYCLE_57.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! RIDES</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Captain Marvel Carol Danvers On Motorcycle VAULTED #57", "R$ 354", "POP! RIDES", ["CAROL_DANVERS_ON_MOTORCYCLE_57.jpg", "CAROL_DANVERS_ON_MOTORCYCLE_57(1).jpg", "CAROL_DANVERS_ON_MOTORCYCLE_57(2).jpg", "CAROL_DANVERS_ON_MOTORCYCLE_57(3).jpg"], "F-057", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Captain Marvel Carol Danvers On Motorcycle VAULTED #57</h3>
+                        <div class="card-foot">
+                            <strong>R$ 354</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Captain Marvel Carol Danvers On Motorcycle VAULTED #57", "R$ 354", "POP! RIDES", ["CAROL_DANVERS_ON_MOTORCYCLE_57.jpg", "CAROL_DANVERS_ON_MOTORCYCLE_57(1).jpg", "CAROL_DANVERS_ON_MOTORCYCLE_57(2).jpg", "CAROL_DANVERS_ON_MOTORCYCLE_57(3).jpg"], "F-057", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! DC Comics Mulher Gato / Catwoman Exclusive VAULTED #136", "R$ 489", "POP! HEROES", ["CATWOMAN_136.jpg", "CATWOMAN_136(1).jpg", "CATWOMAN_136(2).jpg", "CATWOMAN_136(3).jpg", "CATWOMAN_136(4).jpg", "CATWOMAN_136(5).jpg"], "F-136", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! DC Comics Mulher Gato / Catwoman Exclusive VAULTED #136" src="img/CATWOMAN_136.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! HEROES</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! DC Comics Mulher Gato / Catwoman Exclusive VAULTED #136", "R$ 489", "POP! HEROES", ["CATWOMAN_136.jpg", "CATWOMAN_136(1).jpg", "CATWOMAN_136(2).jpg", "CATWOMAN_136(3).jpg", "CATWOMAN_136(4).jpg", "CATWOMAN_136(5).jpg"], "F-136", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! DC Comics Mulher Gato / Catwoman Exclusive VAULTED #136</h3>
+                        <div class="card-foot">
+                            <strong>R$ 489</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! DC Comics Mulher Gato / Catwoman Exclusive VAULTED #136", "R$ 489", "POP! HEROES", ["CATWOMAN_136.jpg", "CATWOMAN_136(1).jpg", "CATWOMAN_136(2).jpg", "CATWOMAN_136(3).jpg", "CATWOMAN_136(4).jpg", "CATWOMAN_136(5).jpg"], "F-136", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Marvel Runaways Chase Stein #360", "R$ 109", "POP!", ["CHASE_STEIN_360.jpg", "CHASE_STEIN_360(1).jpg", "CHASE_STEIN_360(2).jpg", "CHASE_STEIN_360(3).jpg"], "F-360", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Marvel Runaways Chase Stein #360" src="img/CHASE_STEIN_360.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Marvel Runaways Chase Stein #360", "R$ 109", "POP!", ["CHASE_STEIN_360.jpg", "CHASE_STEIN_360(1).jpg", "CHASE_STEIN_360(2).jpg", "CHASE_STEIN_360(3).jpg"], "F-360", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Marvel Runaways Chase Stein #360</h3>
+                        <div class="card-foot">
+                            <strong>R$ 109</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Marvel Runaways Chase Stein #360", "R$ 109", "POP!", ["CHASE_STEIN_360.jpg", "CHASE_STEIN_360(1).jpg", "CHASE_STEIN_360(2).jpg", "CHASE_STEIN_360(3).jpg"], "F-360", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Television Cheryl Blossom #590", "R$ 150", "POP! TELEVISION", ["CHERYL_BLOSSOM_590.jpg", "CHERYL_BLOSSOM_590(1).jpg", "CHERYL_BLOSSOM_590(2).jpg", "CHERYL_BLOSSOM_590(4).jpg", "CHERYL_BLOSSOM_590(3).jpg"], "F-590", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Television Cheryl Blossom #590" src="img/CHERYL_BLOSSOM_590.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! TELEVISION</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Television Cheryl Blossom #590", "R$ 150", "POP! TELEVISION", ["CHERYL_BLOSSOM_590.jpg", "CHERYL_BLOSSOM_590(1).jpg", "CHERYL_BLOSSOM_590(2).jpg", "CHERYL_BLOSSOM_590(4).jpg", "CHERYL_BLOSSOM_590(3).jpg"], "F-590", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Television Cheryl Blossom #590</h3>
+                        <div class="card-foot">
+                            <strong>R$ 150</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Television Cheryl Blossom #590", "R$ 150", "POP! TELEVISION", ["CHERYL_BLOSSOM_590.jpg", "CHERYL_BLOSSOM_590(1).jpg", "CHERYL_BLOSSOM_590(2).jpg", "CHERYL_BLOSSOM_590(4).jpg", "CHERYL_BLOSSOM_590(3).jpg"], "F-590", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Games Kingdom Hearts Tico e Teco / Chip And Dale 2 Pack VAULTED", "R$ 899", "POP!", ["CHIP_AND_DALE.jpg", "CHIP_AND_DALE (1).jpg", "CHIP_AND_DALE (2).jpg", "CHIP_AND_DALE (3).jpg", "CHIP_AND_DALE (4).jpg", "CHIP_AND_DALE (5).jpg"], "F-CAD", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Games Kingdom Hearts Tico e Teco / Chip And Dale 2 Pack VAULTED" src="img/CHIP_AND_DALE.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Games Kingdom Hearts Tico e Teco / Chip And Dale 2 Pack VAULTED", "R$ 899", "POP!", ["CHIP_AND_DALE.jpg", "CHIP_AND_DALE (1).jpg", "CHIP_AND_DALE (2).jpg", "CHIP_AND_DALE (3).jpg", "CHIP_AND_DALE (4).jpg", "CHIP_AND_DALE (5).jpg"], "F-CAD", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Games Kingdom Hearts Tico e Teco / Chip And Dale 2 Pack VAULTED</h3>
+                        <div class="card-foot">
+                            <strong>R$ 899</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Games Kingdom Hearts Tico e Teco / Chip And Dale 2 Pack VAULTED", "R$ 899", "POP!", ["CHIP_AND_DALE.jpg", "CHIP_AND_DALE (1).jpg", "CHIP_AND_DALE (2).jpg", "CHIP_AND_DALE (3).jpg", "CHIP_AND_DALE (4).jpg", "CHIP_AND_DALE (5).jpg"], "F-CAD", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Retro Toys Monster High Clawdeen Wolf VAULTED #371", "R$ 899", "POP! MOVIES", ["Clawdeen_Wolf_371.jpg", "Clawdeen_Wolf_371 (1).jpg", "Clawdeen_Wolf_371 (2).jpg", "Clawdeen_Wolf_371 (3).jpg", "Clawdeen_Wolf_371 (4).jpg", "Clawdeen_Wolf_371 (5).jpg"], "F-371", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Retro Toys Monster High Clawdeen Wolf VAULTED #371" src="img/Clawdeen_Wolf_371.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! MOVIES</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Retro Toys Monster High Clawdeen Wolf VAULTED #371", "R$ 899", "POP! MOVIES", ["Clawdeen_Wolf_371.jpg", "Clawdeen_Wolf_371 (1).jpg", "Clawdeen_Wolf_371 (2).jpg", "Clawdeen_Wolf_371 (3).jpg", "Clawdeen_Wolf_371 (4).jpg", "Clawdeen_Wolf_371 (5).jpg"], "F-371", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Retro Toys Monster High Clawdeen Wolf VAULTED #371</h3>
+                        <div class="card-foot">
+                            <strong>R$ 899</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Retro Toys Monster High Clawdeen Wolf VAULTED #371", "R$ 899", "POP! MOVIES", ["Clawdeen_Wolf_371.jpg", "Clawdeen_Wolf_371 (1).jpg", "Clawdeen_Wolf_371 (2).jpg", "Clawdeen_Wolf_371 (3).jpg", "Clawdeen_Wolf_371 (4).jpg", "Clawdeen_Wolf_371 (5).jpg"], "F-371", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Marvel X-Men Colossus #316", "R$ 223", "POP!", ["COLOSSUS_316.jpg", "COLOSSUS_316(1).jpg", "COLOSSUS_316(2).jpg", "COLOSSUS_316(3).jpg"], "F-316", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Marvel X-Men Colossus #316" src="img/COLOSSUS_316.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Marvel X-Men Colossus #316", "R$ 223", "POP!", ["COLOSSUS_316.jpg", "COLOSSUS_316(1).jpg", "COLOSSUS_316(2).jpg", "COLOSSUS_316(3).jpg"], "F-316", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Marvel X-Men Colossus #316</h3>
+                        <div class="card-foot">
+                            <strong>R$ 223</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Marvel X-Men Colossus #316", "R$ 223", "POP!", ["COLOSSUS_316.jpg", "COLOSSUS_316(1).jpg", "COLOSSUS_316(2).jpg", "COLOSSUS_316(3).jpg"], "F-316", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Marvel X-Men Colossus #411 Exclusivo VAULTED", "R$ 489", "POP!", ["COLOSSUS_411.jpg", "COLOSSUS_411(1).jpg", "COLOSSUS_411(2).jpg", "COLOSSUS_411(3).jpg"], "F-411", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Marvel X-Men Colossus #411 Exclusivo VAULTED" src="img/COLOSSUS_411.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Marvel X-Men Colossus #411 Exclusivo VAULTED", "R$ 489", "POP!", ["COLOSSUS_411.jpg", "COLOSSUS_411(1).jpg", "COLOSSUS_411(2).jpg", "COLOSSUS_411(3).jpg"], "F-411", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Marvel X-Men Colossus #411 Exclusivo VAULTED</h3>
+                        <div class="card-foot">
+                            <strong>R$ 489</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Marvel X-Men Colossus #411 Exclusivo VAULTED", "R$ 489", "POP!", ["COLOSSUS_411.jpg", "COLOSSUS_411(1).jpg", "COLOSSUS_411(2).jpg", "COLOSSUS_411(3).jpg"], "F-411", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Star Wars Darth Maul #09", "R$ 159", "POP!", ["DARTH-MAUL_09.jpg", "DARTH-MAUL_09 (1).jpg", "DARTH-MAUL_09 (2).jpg", "DARTH-MAUL_09 (3).jpg", "DARTH-MAUL_09 (4).jpg", "DARTH-MAUL_09 (5).jpg"], "F-009", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Star Wars Darth Maul #09" src="img/DARTH-MAUL_09.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Star Wars Darth Maul #09", "R$ 159", "POP!", ["DARTH-MAUL_09.jpg", "DARTH-MAUL_09 (1).jpg", "DARTH-MAUL_09 (2).jpg", "DARTH-MAUL_09 (3).jpg", "DARTH-MAUL_09 (4).jpg", "DARTH-MAUL_09 (5).jpg"], "F-009", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Star Wars Darth Maul #09</h3>
+                        <div class="card-foot">
+                            <strong>R$ 159</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Star Wars Darth Maul #09", "R$ 159", "POP!", ["DARTH-MAUL_09.jpg", "DARTH-MAUL_09 (1).jpg", "DARTH-MAUL_09 (2).jpg", "DARTH-MAUL_09 (3).jpg", "DARTH-MAUL_09 (4).jpg", "DARTH-MAUL_09 (5).jpg"], "F-009", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Deadpool Vs Cable #318 VAULTED Marvel Comic Moments", "R$ 399", "POP!", ["DEADPOOL_VS_CABLE_318.jpg", "DEADPOOL_VS_CABLE_318(1).jpg", "DEADPOOL_VS_CABLE_318(2).jpg", "DEADPOOL_VS_CABLE_318(3).jpg", "DEADPOOL_VS_CABLE_318(4).jpg", "DEADPOOL_VS_CABLE_318(5).jpg"], "F-318", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Deadpool Vs Cable #318 VAULTED Marvel Comic Moments" src="img/DEADPOOL_VS_CABLE_318.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Deadpool Vs Cable #318 VAULTED Marvel Comic Moments", "R$ 399", "POP!", ["DEADPOOL_VS_CABLE_318.jpg", "DEADPOOL_VS_CABLE_318(1).jpg", "DEADPOOL_VS_CABLE_318(2).jpg", "DEADPOOL_VS_CABLE_318(3).jpg", "DEADPOOL_VS_CABLE_318(4).jpg", "DEADPOOL_VS_CABLE_318(5).jpg"], "F-318", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Deadpool Vs Cable #318 VAULTED Marvel Comic Moments</h3>
+                        <div class="card-foot">
+                            <strong>R$ 399</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Deadpool Vs Cable #318 VAULTED Marvel Comic Moments", "R$ 399", "POP!", ["DEADPOOL_VS_CABLE_318.jpg", "DEADPOOL_VS_CABLE_318(1).jpg", "DEADPOOL_VS_CABLE_318(2).jpg", "DEADPOOL_VS_CABLE_318(3).jpg", "DEADPOOL_VS_CABLE_318(4).jpg", "DEADPOOL_VS_CABLE_318(5).jpg"], "F-318", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Doctor Strange #149 Marvel Doutor Estranho", "R$ 589", "POP!", ["DOCTOR_STRANGE_149.jpg", "DOCTOR_STRANGE_149(1).jpg", "DOCTOR_STRANGE_149(2).jpg", "DOCTOR_STRANGE_149(3).jpg"], "F-149", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Doctor Strange #149 Marvel Doutor Estranho" src="img/DOCTOR_STRANGE_149.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Doctor Strange #149 Marvel Doutor Estranho", "R$ 589", "POP!", ["DOCTOR_STRANGE_149.jpg", "DOCTOR_STRANGE_149(1).jpg", "DOCTOR_STRANGE_149(2).jpg", "DOCTOR_STRANGE_149(3).jpg"], "F-149", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Doctor Strange #149 Marvel Doutor Estranho</h3>
+                        <div class="card-foot">
+                            <strong>R$ 589</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Doctor Strange #149 Marvel Doutor Estranho", "R$ 589", "POP!", ["DOCTOR_STRANGE_149.jpg", "DOCTOR_STRANGE_149(1).jpg", "DOCTOR_STRANGE_149(2).jpg", "DOCTOR_STRANGE_149(3).jpg"], "F-149", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Domino #315 Marvel Deadpool", "R$ 199", "POP!", ["DOMINO_315.jpg", "DOMINO_315(1).jpg", "DOMINO_315(2).jpg", "DOMINO_315(3).jpg"], "F-315", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Domino #315 Marvel Deadpool" src="img/DOMINO_315.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Domino #315 Marvel Deadpool", "R$ 199", "POP!", ["DOMINO_315.jpg", "DOMINO_315(1).jpg", "DOMINO_315(2).jpg", "DOMINO_315(3).jpg"], "F-315", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Domino #315 Marvel Deadpool</h3>
+                        <div class="card-foot">
+                            <strong>R$ 199</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Domino #315 Marvel Deadpool", "R$ 199", "POP!", ["DOMINO_315.jpg", "DOMINO_315(1).jpg", "DOMINO_315(2).jpg", "DOMINO_315(3).jpg"], "F-315", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Games Kingdom Hearts Donald #262 VAULTED", "R$ 489", "POP!", ["DONALD_262.jpg", "DONALD_262 (2).jpg", "DONALD_262 (3).jpg", "DONALD_262 (4).jpg", "DONALD_262 (5).jpg"], "F-262", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Games Kingdom Hearts Donald #262 VAULTED" src="img/DONALD_262.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Games Kingdom Hearts Donald #262 VAULTED", "R$ 489", "POP!", ["DONALD_262.jpg", "DONALD_262 (2).jpg", "DONALD_262 (3).jpg", "DONALD_262 (4).jpg", "DONALD_262 (5).jpg"], "F-262", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Games Kingdom Hearts Donald #262 VAULTED</h3>
+                        <div class="card-foot">
+                            <strong>R$ 489</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Games Kingdom Hearts Donald #262 VAULTED", "R$ 489", "POP!", ["DONALD_262.jpg", "DONALD_262 (2).jpg", "DONALD_262 (3).jpg", "DONALD_262 (4).jpg", "DONALD_262 (5).jpg"], "F-262", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Dorbz Disney Frozen Anna CHASE Limited Edition #451", "R$ 119", "DORBZ", ["DORBZ_ANNA_451.jpg", "DORBZ_ANNA_451(1).jpg", "DORBZ_ANNA_451(2).jpg", "DORBZ_ANNA_451(3).jpg", "DORBZ_ANNA_451(4).jpg"], "D-451", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Dorbz Disney Frozen Anna CHASE Limited Edition #451" src="img/DORBZ_ANNA_451.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Dorbz Disney Frozen Anna CHASE Limited Edition #451", "R$ 119", "DORBZ", ["DORBZ_ANNA_451.jpg", "DORBZ_ANNA_451(1).jpg", "DORBZ_ANNA_451(2).jpg", "DORBZ_ANNA_451(3).jpg", "DORBZ_ANNA_451(4).jpg"], "D-451", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Dorbz Disney Frozen Anna CHASE Limited Edition #451</h3>
+                        <div class="card-foot">
+                            <strong>R$ 119</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Dorbz Disney Frozen Anna CHASE Limited Edition #451", "R$ 119", "DORBZ", ["DORBZ_ANNA_451.jpg", "DORBZ_ANNA_451(1).jpg", "DORBZ_ANNA_451(2).jpg", "DORBZ_ANNA_451(3).jpg", "DORBZ_ANNA_451(4).jpg"], "D-451", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Dorbz Batman Vinyl Figure #36 [Black Suit]", "R$ 489", "DORBZ", ["DORBZ_BATMAN_036.jpg", "DORBZ_BATMAN_036 (1).jpg", "DORBZ_BATMAN_036 (2).jpg", "DORBZ_BATMAN_036 (3).jpg", "DORBZ_BATMAN_036 (4).jpg"], "D-036", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Dorbz Batman Vinyl Figure #36 [Black Suit]" src="img/DORBZ_BATMAN_036.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Dorbz Batman Vinyl Figure #36 [Black Suit]", "R$ 489", "DORBZ", ["DORBZ_BATMAN_036.jpg", "DORBZ_BATMAN_036 (1).jpg", "DORBZ_BATMAN_036 (2).jpg", "DORBZ_BATMAN_036 (3).jpg", "DORBZ_BATMAN_036 (4).jpg"], "D-036", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Dorbz Batman Vinyl Figure #36 [Black Suit]</h3>
+                        <div class="card-foot">
+                            <strong>R$ 489</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Dorbz Batman Vinyl Figure #36 [Black Suit]", "R$ 489", "DORBZ", ["DORBZ_BATMAN_036.jpg", "DORBZ_BATMAN_036 (1).jpg", "DORBZ_BATMAN_036 (2).jpg", "DORBZ_BATMAN_036 (3).jpg", "DORBZ_BATMAN_036 (4).jpg"], "D-036", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Dorbz Deadshot #164 NYCC 2016 Limited Edition", "R$ 180", "DORBZ", ["DORBZ_DEADSHOT_164.jpg", "DORBZ_DEADSHOT_164 (1).jpg", "DORBZ_DEADSHOT_164 (2).jpg", "DORBZ_DEADSHOT_164 (3).jpg", "DORBZ_DEADSHOT_164 (4).jpg"], "D-164", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Dorbz Deadshot #164 NYCC 2016 Limited Edition" src="img/DORBZ_DEADSHOT_164.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Dorbz Deadshot #164 NYCC 2016 Limited Edition", "R$ 180", "DORBZ", ["DORBZ_DEADSHOT_164.jpg", "DORBZ_DEADSHOT_164 (1).jpg", "DORBZ_DEADSHOT_164 (2).jpg", "DORBZ_DEADSHOT_164 (3).jpg", "DORBZ_DEADSHOT_164 (4).jpg"], "D-164", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Dorbz Deadshot #164 NYCC 2016 Limited Edition</h3>
+                        <div class="card-foot">
+                            <strong>R$ 180</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Dorbz Deadshot #164 NYCC 2016 Limited Edition", "R$ 180", "DORBZ", ["DORBZ_DEADSHOT_164.jpg", "DORBZ_DEADSHOT_164 (1).jpg", "DORBZ_DEADSHOT_164 (2).jpg", "DORBZ_DEADSHOT_164 (3).jpg", "DORBZ_DEADSHOT_164 (4).jpg"], "D-164", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Fun\u200ako Dorbz Deadshot #164 Comics Theme", "R$ 180", "DORBZ", ["DORBZ_DEADSHOT_1640.jpg", "DORBZ_DEADSHOT_164(1).jpg", "DORBZ_DEADSHOT_164(2).jpg", "DORBZ_DEADSHOT_164(3).jpg", "DORBZ_DEADSHOT_164(4).jpg", "DORBZ_DEADSHOT_164(5).jpg"], "D-164", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Fun ko Dorbz Deadshot #164 Comics Theme" src="img/DORBZ_DEADSHOT_1640.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Fun\u200ako Dorbz Deadshot #164 Comics Theme", "R$ 180", "DORBZ", ["DORBZ_DEADSHOT_1640.jpg", "DORBZ_DEADSHOT_164(1).jpg", "DORBZ_DEADSHOT_164(2).jpg", "DORBZ_DEADSHOT_164(3).jpg", "DORBZ_DEADSHOT_164(4).jpg", "DORBZ_DEADSHOT_164(5).jpg"], "D-164", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Fun ko Dorbz Deadshot #164 Comics Theme</h3>
+                        <div class="card-foot">
+                            <strong>R$ 180</strong>
+                            <button class="details" onclick='abrirDetalhes("Fun\u200ako Dorbz Deadshot #164 Comics Theme", "R$ 180", "DORBZ", ["DORBZ_DEADSHOT_1640.jpg", "DORBZ_DEADSHOT_164(1).jpg", "DORBZ_DEADSHOT_164(2).jpg", "DORBZ_DEADSHOT_164(3).jpg", "DORBZ_DEADSHOT_164(4).jpg", "DORBZ_DEADSHOT_164(5).jpg"], "D-164", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Dorbz Enchantress Esquadr\u00e3o Suicida #165", "R$ 105", "DORBZ", ["DORBZ_ENCHANTRESS_165.jpg", "DORBZ_ENCHANTRESS_165 (1).jpg", "DORBZ_ENCHANTRESS_165 (2).jpg", "DORBZ_ENCHANTRESS_165 (3).jpg", "DORBZ_ENCHANTRESS_165 (4).jpg", "DORBZ_ENCHANTRESS_165 (5).jpg"], "D-165", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Dorbz Enchantress Esquadrão Suicida #165" src="img/DORBZ_ENCHANTRESS_165.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Dorbz Enchantress Esquadr\u00e3o Suicida #165", "R$ 105", "DORBZ", ["DORBZ_ENCHANTRESS_165.jpg", "DORBZ_ENCHANTRESS_165 (1).jpg", "DORBZ_ENCHANTRESS_165 (2).jpg", "DORBZ_ENCHANTRESS_165 (3).jpg", "DORBZ_ENCHANTRESS_165 (4).jpg", "DORBZ_ENCHANTRESS_165 (5).jpg"], "D-165", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Dorbz Enchantress Esquadrão Suicida #165</h3>
+                        <div class="card-foot">
+                            <strong>R$ 105</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Dorbz Enchantress Esquadr\u00e3o Suicida #165", "R$ 105", "DORBZ", ["DORBZ_ENCHANTRESS_165.jpg", "DORBZ_ENCHANTRESS_165 (1).jpg", "DORBZ_ENCHANTRESS_165 (2).jpg", "DORBZ_ENCHANTRESS_165 (3).jpg", "DORBZ_ENCHANTRESS_165 (4).jpg", "DORBZ_ENCHANTRESS_165 (5).jpg"], "D-165", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Dorbz Hawkgirl #409 HOT TOPIC Exclusive 3.000 pcs", "R$ 260", "DORBZ", ["DORBZ_HAWKGIRL_409.jpg", "DORBZ_HAWKGIRL_409(1).jpg", "DORBZ_HAWKGIRL_409(2).jpg", "DORBZ_HAWKGIRL_409(3).jpg", "DORBZ_HAWKGIRL_409(4).jpg", "DORBZ_HAWKGIRL_409(5).jpg"], "D-409", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Dorbz Hawkgirl #409 HOT TOPIC Exclusive 3.000 pcs" src="img/DORBZ_HAWKGIRL_409.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Dorbz Hawkgirl #409 HOT TOPIC Exclusive 3.000 pcs", "R$ 260", "DORBZ", ["DORBZ_HAWKGIRL_409.jpg", "DORBZ_HAWKGIRL_409(1).jpg", "DORBZ_HAWKGIRL_409(2).jpg", "DORBZ_HAWKGIRL_409(3).jpg", "DORBZ_HAWKGIRL_409(4).jpg", "DORBZ_HAWKGIRL_409(5).jpg"], "D-409", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Dorbz Hawkgirl #409 HOT TOPIC Exclusive 3.000 pcs</h3>
+                        <div class="card-foot">
+                            <strong>R$ 260</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Dorbz Hawkgirl #409 HOT TOPIC Exclusive 3.000 pcs", "R$ 260", "DORBZ", ["DORBZ_HAWKGIRL_409.jpg", "DORBZ_HAWKGIRL_409(1).jpg", "DORBZ_HAWKGIRL_409(2).jpg", "DORBZ_HAWKGIRL_409(3).jpg", "DORBZ_HAWKGIRL_409(4).jpg", "DORBZ_HAWKGIRL_409(5).jpg"], "D-409", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Dorbz Game of Thrones Jaime Lannister #372", "R$ 159", "DORBZ", ["DORBZ_JAIME-LANNISTER_372.jpg", "DORBZ_JAIME-LANNISTER_372 (2).jpg", "DORBZ_JAIME-LANNISTER_372 (3).jpg", "DORBZ_JAIME-LANNISTER_372 (4).jpg", "DORBZ_JAIME-LANNISTER_372 (5).jpg"], "D-372", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Dorbz Game of Thrones Jaime Lannister #372" src="img/DORBZ_JAIME-LANNISTER_372.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Dorbz Game of Thrones Jaime Lannister #372", "R$ 159", "DORBZ", ["DORBZ_JAIME-LANNISTER_372.jpg", "DORBZ_JAIME-LANNISTER_372 (2).jpg", "DORBZ_JAIME-LANNISTER_372 (3).jpg", "DORBZ_JAIME-LANNISTER_372 (4).jpg", "DORBZ_JAIME-LANNISTER_372 (5).jpg"], "D-372", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Dorbz Game of Thrones Jaime Lannister #372</h3>
+                        <div class="card-foot">
+                            <strong>R$ 159</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Dorbz Game of Thrones Jaime Lannister #372", "R$ 159", "DORBZ", ["DORBZ_JAIME-LANNISTER_372.jpg", "DORBZ_JAIME-LANNISTER_372 (2).jpg", "DORBZ_JAIME-LANNISTER_372 (3).jpg", "DORBZ_JAIME-LANNISTER_372 (4).jpg", "DORBZ_JAIME-LANNISTER_372 (5).jpg"], "D-372", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Dorbz Batman Series One Killer Croc #035", "R$ 120", "DORBZ", ["DORBZ_KILLER_CROC_035.jpg", "DORBZ_KILLER_CROC_035(1).jpg", "DORBZ_KILLER_CROC_035(1).jpg", "DORBZ_KILLER_CROC_035(1).jpg", "DORBZ_KILLER_CROC_035(1).jpg", "DORBZ_KILLER_CROC_035(1).jpg"], "D-035", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Dorbz Batman Series One Killer Croc #035" src="img/DORBZ_KILLER_CROC_035.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Dorbz Batman Series One Killer Croc #035", "R$ 120", "DORBZ", ["DORBZ_KILLER_CROC_035.jpg", "DORBZ_KILLER_CROC_035(1).jpg", "DORBZ_KILLER_CROC_035(1).jpg", "DORBZ_KILLER_CROC_035(1).jpg", "DORBZ_KILLER_CROC_035(1).jpg", "DORBZ_KILLER_CROC_035(1).jpg"], "D-035", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Dorbz Batman Series One Killer Croc #035</h3>
+                        <div class="card-foot">
+                            <strong>R$ 120</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Dorbz Batman Series One Killer Croc #035", "R$ 120", "DORBZ", ["DORBZ_KILLER_CROC_035.jpg", "DORBZ_KILLER_CROC_035(1).jpg", "DORBZ_KILLER_CROC_035(1).jpg", "DORBZ_KILLER_CROC_035(1).jpg", "DORBZ_KILLER_CROC_035(1).jpg", "DORBZ_KILLER_CROC_035(1).jpg"], "D-035", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Dorbz Game of Thrones Melisandre #375", "R$ 260", "DORBZ", ["DORBZ_MELISANDRE_375.jpg", "DORBZ_MELISANDRE_375 (1).jpg", "DORBZ_MELISANDRE_375 (2).jpg", "DORBZ_MELISANDRE_375 (3).jpg", "DORBZ_MELISANDRE_375 (4).jpg", "DORBZ_MELISANDRE_375 (5).jpg"], "D-375", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Dorbz Game of Thrones Melisandre #375" src="img/DORBZ_MELISANDRE_375.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Dorbz Game of Thrones Melisandre #375", "R$ 260", "DORBZ", ["DORBZ_MELISANDRE_375.jpg", "DORBZ_MELISANDRE_375 (1).jpg", "DORBZ_MELISANDRE_375 (2).jpg", "DORBZ_MELISANDRE_375 (3).jpg", "DORBZ_MELISANDRE_375 (4).jpg", "DORBZ_MELISANDRE_375 (5).jpg"], "D-375", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Dorbz Game of Thrones Melisandre #375</h3>
+                        <div class="card-foot">
+                            <strong>R$ 260</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Dorbz Game of Thrones Melisandre #375", "R$ 260", "DORBZ", ["DORBZ_MELISANDRE_375.jpg", "DORBZ_MELISANDRE_375 (1).jpg", "DORBZ_MELISANDRE_375 (2).jpg", "DORBZ_MELISANDRE_375 (3).jpg", "DORBZ_MELISANDRE_375 (4).jpg", "DORBZ_MELISANDRE_375 (5).jpg"], "D-375", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Dorbz Marvel X-Men Old Man Logan #347 FALL CONVENTION 2017", "R$ 220", "DORBZ", ["DORBZ_OLD-MAN-LOGAN_347.jpg", "DORBZ_OLD-MAN-LOGAN_347(1).jpg", "DORBZ_OLD-MAN-LOGAN_347(2).jpg", "DORBZ_OLD-MAN-LOGAN_347(3).jpg"], "D-347", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Dorbz Marvel X-Men Old Man Logan #347 FALL CONVENTION 2017" src="img/DORBZ_OLD-MAN-LOGAN_347.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Dorbz Marvel X-Men Old Man Logan #347 FALL CONVENTION 2017", "R$ 220", "DORBZ", ["DORBZ_OLD-MAN-LOGAN_347.jpg", "DORBZ_OLD-MAN-LOGAN_347(1).jpg", "DORBZ_OLD-MAN-LOGAN_347(2).jpg", "DORBZ_OLD-MAN-LOGAN_347(3).jpg"], "D-347", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Dorbz Marvel X-Men Old Man Logan #347 FALL CONVENTION 2017</h3>
+                        <div class="card-foot">
+                            <strong>R$ 220</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Dorbz Marvel X-Men Old Man Logan #347 FALL CONVENTION 2017", "R$ 220", "DORBZ", ["DORBZ_OLD-MAN-LOGAN_347.jpg", "DORBZ_OLD-MAN-LOGAN_347(1).jpg", "DORBZ_OLD-MAN-LOGAN_347(2).jpg", "DORBZ_OLD-MAN-LOGAN_347(3).jpg"], "D-347", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Dorbz Disney Frozen Sven #452 Vinyl Collectible", "R$ 120", "DORBZ", ["DORBZ_SVEN_452.jpg", "DORBZ_SVEN_452(1).jpg", "DORBZ_SVEN_452(2).jpg", "DORBZ_SVEN_452(3).jpg", "DORBZ_SVEN_452(4).jpg"], "D-452", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Dorbz Disney Frozen Sven #452 Vinyl Collectible" src="img/DORBZ_SVEN_452.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Dorbz Disney Frozen Sven #452 Vinyl Collectible", "R$ 120", "DORBZ", ["DORBZ_SVEN_452.jpg", "DORBZ_SVEN_452(1).jpg", "DORBZ_SVEN_452(2).jpg", "DORBZ_SVEN_452(3).jpg", "DORBZ_SVEN_452(4).jpg"], "D-452", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Dorbz Disney Frozen Sven #452 Vinyl Collectible</h3>
+                        <div class="card-foot">
+                            <strong>R$ 120</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Dorbz Disney Frozen Sven #452 Vinyl Collectible", "R$ 120", "DORBZ", ["DORBZ_SVEN_452.jpg", "DORBZ_SVEN_452(1).jpg", "DORBZ_SVEN_452(2).jpg", "DORBZ_SVEN_452(3).jpg", "DORBZ_SVEN_452(4).jpg"], "D-452", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Dorbz The Joker Esquadr\u00e3o Suicida #162", "R$ 145", "DORBZ", ["DORBZZ_THE-JOKER_162.jpg", "DORBZZ_THE-JOKER_162(1).jpg", "DORBZZ_THE-JOKER_162(2).jpg", "DORBZZ_THE-JOKER_162(3).jpg", "DORBZZ_THE-JOKER_162(4).jpg", "DORBZZ_THE-JOKER_162(5).jpg"], "D-162", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Dorbz The Joker Esquadrão Suicida #162" src="img/DORBZZ_THE-JOKER_162.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Dorbz The Joker Esquadr\u00e3o Suicida #162", "R$ 145", "DORBZ", ["DORBZZ_THE-JOKER_162.jpg", "DORBZZ_THE-JOKER_162(1).jpg", "DORBZZ_THE-JOKER_162(2).jpg", "DORBZZ_THE-JOKER_162(3).jpg", "DORBZZ_THE-JOKER_162(4).jpg", "DORBZZ_THE-JOKER_162(5).jpg"], "D-162", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Dorbz The Joker Esquadrão Suicida #162</h3>
+                        <div class="card-foot">
+                            <strong>R$ 145</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Dorbz The Joker Esquadr\u00e3o Suicida #162", "R$ 145", "DORBZ", ["DORBZZ_THE-JOKER_162.jpg", "DORBZZ_THE-JOKER_162(1).jpg", "DORBZZ_THE-JOKER_162(2).jpg", "DORBZZ_THE-JOKER_162(3).jpg", "DORBZZ_THE-JOKER_162(4).jpg", "DORBZZ_THE-JOKER_162(5).jpg"], "D-162", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! DC Comics Etta Candy de Wonder Woman #228", "R$ 260", "POP! HEROES", ["ETTA_CANDY_228.jpg", "ETTA_CANDY_228(1).jpg", "ETTA_CANDY_228(2).jpg", "ETTA_CANDY_228(3).jpg", "ETTA_CANDY_228(4).jpg"], "F-228", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! DC Comics Etta Candy de Wonder Woman #228" src="img/ETTA_CANDY_228.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! HEROES</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! DC Comics Etta Candy de Wonder Woman #228", "R$ 260", "POP! HEROES", ["ETTA_CANDY_228.jpg", "ETTA_CANDY_228(1).jpg", "ETTA_CANDY_228(2).jpg", "ETTA_CANDY_228(3).jpg", "ETTA_CANDY_228(4).jpg"], "F-228", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! DC Comics Etta Candy de Wonder Woman #228</h3>
+                        <div class="card-foot">
+                            <strong>R$ 260</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! DC Comics Etta Candy de Wonder Woman #228", "R$ 260", "POP! HEROES", ["ETTA_CANDY_228.jpg", "ETTA_CANDY_228(1).jpg", "ETTA_CANDY_228(2).jpg", "ETTA_CANDY_228(3).jpg", "ETTA_CANDY_228(4).jpg"], "F-228", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Frankie Stein VAULTED Monster High #369", "R$ 600", "POP!", ["Frankie_Stein_369.jpg", "Frankie_Stein_369 (1).jpg", "Frankie_Stein_369 (2).jpg", "Frankie_Stein_369 (3).jpg", "Frankie_Stein_369 (4).jpg", "Frankie_Stein_369 (5).jpg"], "F-369", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Frankie Stein VAULTED Monster High #369" src="img/Frankie_Stein_369.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Frankie Stein VAULTED Monster High #369", "R$ 600", "POP!", ["Frankie_Stein_369.jpg", "Frankie_Stein_369 (1).jpg", "Frankie_Stein_369 (2).jpg", "Frankie_Stein_369 (3).jpg", "Frankie_Stein_369 (4).jpg", "Frankie_Stein_369 (5).jpg"], "F-369", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Frankie Stein VAULTED Monster High #369</h3>
+                        <div class="card-foot">
+                            <strong>R$ 600</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Frankie Stein VAULTED Monster High #369", "R$ 600", "POP!", ["Frankie_Stein_369.jpg", "Frankie_Stein_369 (1).jpg", "Frankie_Stein_369 (2).jpg", "Frankie_Stein_369 (3).jpg", "Frankie_Stein_369 (4).jpg", "Frankie_Stein_369 (5).jpg"], "F-369", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Games Marvel vs. Capcom Gamora Vs Strider 2 Pack", "R$ 389", "POP! GAMES", ["GAMORA_VS_STRIDER.jpg", "GAMORA_VS_STRIDER(1).jpg", "GAMORA_VS_STRIDER(2).jpg", "GAMORA_VS_STRIDER(3).jpg"], "F-GVS", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Games Marvel vs. Capcom Gamora Vs Strider 2 Pack" src="img/GAMORA_VS_STRIDER.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! GAMES</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Games Marvel vs. Capcom Gamora Vs Strider 2 Pack", "R$ 389", "POP! GAMES", ["GAMORA_VS_STRIDER.jpg", "GAMORA_VS_STRIDER(1).jpg", "GAMORA_VS_STRIDER(2).jpg", "GAMORA_VS_STRIDER(3).jpg"], "F-GVS", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Games Marvel vs. Capcom Gamora Vs Strider 2 Pack</h3>
+                        <div class="card-foot">
+                            <strong>R$ 389</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Games Marvel vs. Capcom Gamora Vs Strider 2 Pack", "R$ 389", "POP! GAMES", ["GAMORA_VS_STRIDER.jpg", "GAMORA_VS_STRIDER(1).jpg", "GAMORA_VS_STRIDER(2).jpg", "GAMORA_VS_STRIDER(3).jpg"], "F-GVS", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Disney Aladdin Genie With Lamp #476 GLOW IN DARK", "R$ 219", "POP!", ["GENIE-WITH-LAMP_476.jpg", "GENIE-WITH-LAMP_476 (1).jpg", "GENIE-WITH-LAMP_476 (2).jpg", "GENIE-WITH-LAMP_476 (3).jpg", "GENIE-WITH-LAMP_476 (4).jpg", "GENIE-WITH-LAMP_476 (5).jpg"], "F-476", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Disney Aladdin Genie With Lamp #476 GLOW IN DARK" src="img/GENIE-WITH-LAMP_476.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Disney Aladdin Genie With Lamp #476 GLOW IN DARK", "R$ 219", "POP!", ["GENIE-WITH-LAMP_476.jpg", "GENIE-WITH-LAMP_476 (1).jpg", "GENIE-WITH-LAMP_476 (2).jpg", "GENIE-WITH-LAMP_476 (3).jpg", "GENIE-WITH-LAMP_476 (4).jpg", "GENIE-WITH-LAMP_476 (5).jpg"], "F-476", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Disney Aladdin Genie With Lamp #476 GLOW IN DARK</h3>
+                        <div class="card-foot">
+                            <strong>R$ 219</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Disney Aladdin Genie With Lamp #476 GLOW IN DARK", "R$ 219", "POP!", ["GENIE-WITH-LAMP_476.jpg", "GENIE-WITH-LAMP_476 (1).jpg", "GENIE-WITH-LAMP_476 (2).jpg", "GENIE-WITH-LAMP_476 (3).jpg", "GENIE-WITH-LAMP_476 (4).jpg", "GENIE-WITH-LAMP_476 (5).jpg"], "F-476", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Star Wars Han Solo & Chewbacca 2 pack Exclusivo", "R$ 590", "POP! TELEVISION", ["HAN-SOLO_CHEWBACCA.jpg", "HAN-SOLO_CHEWBACCA (1).jpg", "HAN-SOLO_CHEWBACCA (2).jpg", "HAN-SOLO_CHEWBACCA (3).jpg", "HAN-SOLO_CHEWBACCA (4).jpg"], "F-HSC", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Star Wars Han Solo & Chewbacca 2 pack Exclusivo" src="img/HAN-SOLO_CHEWBACCA.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! TELEVISION</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Star Wars Han Solo & Chewbacca 2 pack Exclusivo", "R$ 590", "POP! TELEVISION", ["HAN-SOLO_CHEWBACCA.jpg", "HAN-SOLO_CHEWBACCA (1).jpg", "HAN-SOLO_CHEWBACCA (2).jpg", "HAN-SOLO_CHEWBACCA (3).jpg", "HAN-SOLO_CHEWBACCA (4).jpg"], "F-HSC", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Star Wars Han Solo & Chewbacca 2 pack Exclusivo</h3>
+                        <div class="card-foot">
+                            <strong>R$ 590</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Star Wars Han Solo & Chewbacca 2 pack Exclusivo", "R$ 590", "POP! TELEVISION", ["HAN-SOLO_CHEWBACCA.jpg", "HAN-SOLO_CHEWBACCA (1).jpg", "HAN-SOLO_CHEWBACCA (2).jpg", "HAN-SOLO_CHEWBACCA (3).jpg", "HAN-SOLO_CHEWBACCA (4).jpg"], "F-HSC", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Dc Comics Harley Quinn Impopster #127", "R$ 180", "POP! HEROES", ["HARLEY-QUINN_IMPOPSTER_127.jpg", "HARLEY-QUINN_IMPOPSTER_127(1).jpg", "HARLEY-QUINN_IMPOPSTER_127(2).jpg", "HARLEY-QUINN_IMPOPSTER_127(3).jpg", "HARLEY-QUINN_IMPOPSTER_127(4).jpg"], "F-127", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Dc Comics Harley Quinn Impopster #127" src="img/HARLEY-QUINN_IMPOPSTER_127.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! HEROES</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Dc Comics Harley Quinn Impopster #127", "R$ 180", "POP! HEROES", ["HARLEY-QUINN_IMPOPSTER_127.jpg", "HARLEY-QUINN_IMPOPSTER_127(1).jpg", "HARLEY-QUINN_IMPOPSTER_127(2).jpg", "HARLEY-QUINN_IMPOPSTER_127(3).jpg", "HARLEY-QUINN_IMPOPSTER_127(4).jpg"], "F-127", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Dc Comics Harley Quinn Impopster #127</h3>
+                        <div class="card-foot">
+                            <strong>R$ 180</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Dc Comics Harley Quinn Impopster #127", "R$ 180", "POP! HEROES", ["HARLEY-QUINN_IMPOPSTER_127.jpg", "HARLEY-QUINN_IMPOPSTER_127(1).jpg", "HARLEY-QUINN_IMPOPSTER_127(2).jpg", "HARLEY-QUINN_IMPOPSTER_127(3).jpg", "HARLEY-QUINN_IMPOPSTER_127(4).jpg"], "F-127", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Marvel Os Vingadores Gavi\u00e3o Arqueiro Hawkeye #457", "R$ 259", "POP!", ["HAWKEYE_457.jpg", "HAWKEYE_457(1).jpg", "HAWKEYE_457(2).jpg", "HAWKEYE_457(3).jpg"], "F-457", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Marvel Os Vingadores Gavião Arqueiro Hawkeye #457" src="img/HAWKEYE_457.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Marvel Os Vingadores Gavi\u00e3o Arqueiro Hawkeye #457", "R$ 259", "POP!", ["HAWKEYE_457.jpg", "HAWKEYE_457(1).jpg", "HAWKEYE_457(2).jpg", "HAWKEYE_457(3).jpg"], "F-457", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Marvel Os Vingadores Gavião Arqueiro Hawkeye #457</h3>
+                        <div class="card-foot">
+                            <strong>R$ 259</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Marvel Os Vingadores Gavi\u00e3o Arqueiro Hawkeye #457", "R$ 259", "POP!", ["HAWKEYE_457.jpg", "HAWKEYE_457(1).jpg", "HAWKEYE_457(2).jpg", "HAWKEYE_457(3).jpg"], "F-457", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Disney Holiday Mickey 90th #455", "R$ 389", "POP!", ["HOLIDAY-MICKEY_455.jpg", "HOLIDAY-MICKEY_455 (1).jpg", "HOLIDAY-MICKEY_455 (2).jpg", "HOLIDAY-MICKEY_455 (3).jpg", "HOLIDAY-MICKEY_455 (4).jpg", "HOLIDAY-MICKEY_455 (5).jpg"], "F-455", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Disney Holiday Mickey 90th #455" src="img/HOLIDAY-MICKEY_455.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Disney Holiday Mickey 90th #455", "R$ 389", "POP!", ["HOLIDAY-MICKEY_455.jpg", "HOLIDAY-MICKEY_455 (1).jpg", "HOLIDAY-MICKEY_455 (2).jpg", "HOLIDAY-MICKEY_455 (3).jpg", "HOLIDAY-MICKEY_455 (4).jpg", "HOLIDAY-MICKEY_455 (5).jpg"], "F-455", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Disney Holiday Mickey 90th #455</h3>
+                        <div class="card-foot">
+                            <strong>R$ 389</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Disney Holiday Mickey 90th #455", "R$ 389", "POP!", ["HOLIDAY-MICKEY_455.jpg", "HOLIDAY-MICKEY_455 (1).jpg", "HOLIDAY-MICKEY_455 (2).jpg", "HOLIDAY-MICKEY_455 (3).jpg", "HOLIDAY-MICKEY_455 (4).jpg", "HOLIDAY-MICKEY_455 (5).jpg"], "F-455", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Television American Gods Mr.wednesday #680", "R$ 399", "POP! TELEVISION", ["MR_WEDNESDAY_680.jpg", "MR_WEDNESDAY_680 (1).jpg", "MR_WEDNESDAY_680 (2).jpg", "MR_WEDNESDAY_680 (3).jpg", "MR_WEDNESDAY_680 (4).jpg", "MR_WEDNESDAY_680 (5).jpg"], "F-680", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Television American Gods Mr.wednesday #680" src="img/MR_WEDNESDAY_680.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! TELEVISION</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Television American Gods Mr.wednesday #680", "R$ 399", "POP! TELEVISION", ["MR_WEDNESDAY_680.jpg", "MR_WEDNESDAY_680 (1).jpg", "MR_WEDNESDAY_680 (2).jpg", "MR_WEDNESDAY_680 (3).jpg", "MR_WEDNESDAY_680 (4).jpg", "MR_WEDNESDAY_680 (5).jpg"], "F-680", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Television American Gods Mr.wednesday #680</h3>
+                        <div class="card-foot">
+                            <strong>R$ 399</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Television American Gods Mr.wednesday #680", "R$ 399", "POP! TELEVISION", ["MR_WEDNESDAY_680.jpg", "MR_WEDNESDAY_680 (1).jpg", "MR_WEDNESDAY_680 (2).jpg", "MR_WEDNESDAY_680 (3).jpg", "MR_WEDNESDAY_680 (4).jpg", "MR_WEDNESDAY_680 (5).jpg"], "F-680", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Television American Gods Mad Sweeney #681", "R$ 349", "POP! TELEVISION", ["MAD_SWEENEY_681.jpg", "MAD_SWEENEY_681 (1).jpg", "MAD_SWEENEY_681 (2).jpg", "MAD_SWEENEY_681 (3).jpg", "MAD_SWEENEY_681 (4).jpg", "MAD_SWEENEY_681 (5).jpg"], "F-681", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Television American Gods Mad Sweeney #681" src="img/MAD_SWEENEY_681.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! TELEVISION</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Television American Gods Mad Sweeney #681", "R$ 349", "POP! TELEVISION", ["MAD_SWEENEY_681.jpg", "MAD_SWEENEY_681 (1).jpg", "MAD_SWEENEY_681 (2).jpg", "MAD_SWEENEY_681 (3).jpg", "MAD_SWEENEY_681 (4).jpg", "MAD_SWEENEY_681 (5).jpg"], "F-681", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Television American Gods Mad Sweeney #681</h3>
+                        <div class="card-foot">
+                            <strong>R$ 349</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Television American Gods Mad Sweeney #681", "R$ 349", "POP! TELEVISION", ["MAD_SWEENEY_681.jpg", "MAD_SWEENEY_681 (1).jpg", "MAD_SWEENEY_681 (2).jpg", "MAD_SWEENEY_681 (3).jpg", "MAD_SWEENEY_681 (4).jpg", "MAD_SWEENEY_681 (5).jpg"], "F-681", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko Dorbz Thundercats Jaga Sipirit Edi\u00e7\u00e3o Limitada  2500P\u00c7S", "R$ 260", "DORBZ", ["JAGA_443.jpg", "JAGA_443 (1).jpg", "JAGA_443 (2).jpg", "JAGA_443 (3).jpg", "JAGA_443 (4).jpg"], "D-443", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko Dorbz Thundercats Jaga Sipirit Edição Limitada  2500PÇS" src="img/JAGA_443.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>DORBZ</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko Dorbz Thundercats Jaga Sipirit Edi\u00e7\u00e3o Limitada  2500P\u00c7S", "R$ 260", "DORBZ", ["JAGA_443.jpg", "JAGA_443 (1).jpg", "JAGA_443 (2).jpg", "JAGA_443 (3).jpg", "JAGA_443 (4).jpg"], "D-443", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko Dorbz Thundercats Jaga Sipirit Edição Limitada  2500PÇS</h3>
+                        <div class="card-foot">
+                            <strong>R$ 260</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko Dorbz Thundercats Jaga Sipirit Edi\u00e7\u00e3o Limitada  2500P\u00c7S", "R$ 260", "DORBZ", ["JAGA_443.jpg", "JAGA_443 (1).jpg", "JAGA_443 (2).jpg", "JAGA_443 (3).jpg", "JAGA_443 (4).jpg"], "D-443", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Jurassic Park Dilophosaurus #550", "R$ 575", "POP! MOVIES", ["DILOPHOSAURUS_550.jpg", "DILOPHOSAURUS_550 (1).jpg", "DILOPHOSAURUS_550 (2).jpg", "DILOPHOSAURUS_550 (3).jpg", "DILOPHOSAURUS_550 (4).jpg", "DILOPHOSAURUS_550 (5).jpg"], "F-550", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Jurassic Park Dilophosaurus #550" src="img/DILOPHOSAURUS_550.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! MOVIES</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Jurassic Park Dilophosaurus #550", "R$ 575", "POP! MOVIES", ["DILOPHOSAURUS_550.jpg", "DILOPHOSAURUS_550 (1).jpg", "DILOPHOSAURUS_550 (2).jpg", "DILOPHOSAURUS_550 (3).jpg", "DILOPHOSAURUS_550 (4).jpg", "DILOPHOSAURUS_550 (5).jpg"], "F-550", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Jurassic Park Dilophosaurus #550</h3>
+                        <div class="card-foot">
+                            <strong>R$ 575</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Jurassic Park Dilophosaurus #550", "R$ 575", "POP! MOVIES", ["DILOPHOSAURUS_550.jpg", "DILOPHOSAURUS_550 (1).jpg", "DILOPHOSAURUS_550 (2).jpg", "DILOPHOSAURUS_550 (3).jpg", "DILOPHOSAURUS_550 (4).jpg", "DILOPHOSAURUS_550 (5).jpg"], "F-550", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Filme Terror It A coisa Ben Hanscom #538 Exclusivo Glow", "R$ 589", "POP! MOVIES", ["BEN_HANSCOM_538.jpg", "BEN_HANSCOM_538 (1).jpg", "BEN_HANSCOM_538 (2).jpg", "BEN_HANSCOM_538 (3).jpg", "BEN_HANSCOM_538 (4).jpg", "BEN_HANSCOM_538 (5).jpg"], "F-538", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Filme Terror It A coisa Ben Hanscom #538 Exclusivo Glow" src="img/BEN_HANSCOM_538.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! MOVIES</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Filme Terror It A coisa Ben Hanscom #538 Exclusivo Glow", "R$ 589", "POP! MOVIES", ["BEN_HANSCOM_538.jpg", "BEN_HANSCOM_538 (1).jpg", "BEN_HANSCOM_538 (2).jpg", "BEN_HANSCOM_538 (3).jpg", "BEN_HANSCOM_538 (4).jpg", "BEN_HANSCOM_538 (5).jpg"], "F-538", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Filme Terror It A coisa Ben Hanscom #538 Exclusivo Glow</h3>
+                        <div class="card-foot">
+                            <strong>R$ 589</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Filme Terror It A coisa Ben Hanscom #538 Exclusivo Glow", "R$ 589", "POP! MOVIES", ["BEN_HANSCOM_538.jpg", "BEN_HANSCOM_538 (1).jpg", "BEN_HANSCOM_538 (2).jpg", "BEN_HANSCOM_538 (3).jpg", "BEN_HANSCOM_538 (4).jpg", "BEN_HANSCOM_538 (5).jpg"], "F-538", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Televison El Chavo Del Ocho Chaves #751", "R$ 519", "POP! TELEVISION", ["EL_CHAVO_DEL_OCHO_751.jpg", "EL_CHAVO_DEL_OCHO_751 (1).jpg", "EL_CHAVO_DEL_OCHO_751 (2).jpg", "EL_CHAVO_DEL_OCHO_751 (3).jpg", "EL_CHAVO_DEL_OCHO_751 (4).jpg", "EL_CHAVO_DEL_OCHO_751 (5).jpg"], "F-751", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Televison El Chavo Del Ocho Chaves #751" src="img/EL_CHAVO_DEL_OCHO_751.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! TELEVISION</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Televison El Chavo Del Ocho Chaves #751", "R$ 519", "POP! TELEVISION", ["EL_CHAVO_DEL_OCHO_751.jpg", "EL_CHAVO_DEL_OCHO_751 (1).jpg", "EL_CHAVO_DEL_OCHO_751 (2).jpg", "EL_CHAVO_DEL_OCHO_751 (3).jpg", "EL_CHAVO_DEL_OCHO_751 (4).jpg", "EL_CHAVO_DEL_OCHO_751 (5).jpg"], "F-751", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Televison El Chavo Del Ocho Chaves #751</h3>
+                        <div class="card-foot">
+                            <strong>R$ 519</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Televison El Chavo Del Ocho Chaves #751", "R$ 519", "POP! TELEVISION", ["EL_CHAVO_DEL_OCHO_751.jpg", "EL_CHAVO_DEL_OCHO_751 (1).jpg", "EL_CHAVO_DEL_OCHO_751 (2).jpg", "EL_CHAVO_DEL_OCHO_751 (3).jpg", "EL_CHAVO_DEL_OCHO_751 (4).jpg", "EL_CHAVO_DEL_OCHO_751 (5).jpg"], "F-751", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Mestres Do Universo Man-At-Arms #538 Exclusivo VAULTED", "R$ 589", "POP! TELEVISION", ["MAN_AT_ARMS_538.jpg", "MAN_AT_ARMS_538 (1).jpg", "MAN_AT_ARMS_538 (2).jpg", "MAN_AT_ARMS_538 (3).jpg", "MAN_AT_ARMS_538 (4).jpg", "MAN_AT_ARMS_538 (5).jpg"], "F-538", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Mestres Do Universo Man-At-Arms #538 Exclusivo VAULTED" src="img/MAN_AT_ARMS_538.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! TELEVISION</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Mestres Do Universo Man-At-Arms #538 Exclusivo VAULTED", "R$ 589", "POP! TELEVISION", ["MAN_AT_ARMS_538.jpg", "MAN_AT_ARMS_538 (1).jpg", "MAN_AT_ARMS_538 (2).jpg", "MAN_AT_ARMS_538 (3).jpg", "MAN_AT_ARMS_538 (4).jpg", "MAN_AT_ARMS_538 (5).jpg"], "F-538", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Mestres Do Universo Man-At-Arms #538 Exclusivo VAULTED</h3>
+                        <div class="card-foot">
+                            <strong>R$ 589</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Mestres Do Universo Man-At-Arms #538 Exclusivo VAULTED", "R$ 589", "POP! TELEVISION", ["MAN_AT_ARMS_538.jpg", "MAN_AT_ARMS_538 (1).jpg", "MAN_AT_ARMS_538 (2).jpg", "MAN_AT_ARMS_538 (3).jpg", "MAN_AT_ARMS_538 (4).jpg", "MAN_AT_ARMS_538 (5).jpg"], "F-538", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Stranger Things Dustin Snowball Dance #617 Exclusivo VAULTED", "R$ 799", "POP! TELEVISION", ["DUSTIN_SNOWBALL_DANCE_617.jpg", "DUSTIN_SNOWBALL_DANCE_617 (1).jpg", "DUSTIN_SNOWBALL_DANCE_617 (2).jpg", "DUSTIN_SNOWBALL_DANCE_617 (3).jpg", "DUSTIN_SNOWBALL_DANCE_617 (4).jpg", "DUSTIN_SNOWBALL_DANCE_617 (5).jpg"], "F-617", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Stranger Things Dustin Snowball Dance #617 Exclusivo VAULTED" src="img/DUSTIN_SNOWBALL_DANCE_617.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! TELEVISION</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Stranger Things Dustin Snowball Dance #617 Exclusivo VAULTED", "R$ 799", "POP! TELEVISION", ["DUSTIN_SNOWBALL_DANCE_617.jpg", "DUSTIN_SNOWBALL_DANCE_617 (1).jpg", "DUSTIN_SNOWBALL_DANCE_617 (2).jpg", "DUSTIN_SNOWBALL_DANCE_617 (3).jpg", "DUSTIN_SNOWBALL_DANCE_617 (4).jpg", "DUSTIN_SNOWBALL_DANCE_617 (5).jpg"], "F-617", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Stranger Things Dustin Snowball Dance #617 Exclusivo VAULTED</h3>
+                        <div class="card-foot">
+                            <strong>R$ 799</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Stranger Things Dustin Snowball Dance #617 Exclusivo VAULTED", "R$ 799", "POP! TELEVISION", ["DUSTIN_SNOWBALL_DANCE_617.jpg", "DUSTIN_SNOWBALL_DANCE_617 (1).jpg", "DUSTIN_SNOWBALL_DANCE_617 (2).jpg", "DUSTIN_SNOWBALL_DANCE_617 (3).jpg", "DUSTIN_SNOWBALL_DANCE_617 (4).jpg", "DUSTIN_SNOWBALL_DANCE_617 (5).jpg"], "F-617", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP!The Witcher Wild Hunt Geralt #149 VAULTED", "R$ 699", "POP! GAMES", ["GERALT_149.jpg", "GERALT_149 (1).jpg", "GERALT_149 (2).jpg", "GERALT_149 (3).jpg", "GERALT_149 (4).jpg", "GERALT_149 (5).jpg"], "F-149", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP!The Witcher Wild Hunt Geralt #149 VAULTED" src="img/GERALT_149.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! GAMES</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP!The Witcher Wild Hunt Geralt #149 VAULTED", "R$ 699", "POP! GAMES", ["GERALT_149.jpg", "GERALT_149 (1).jpg", "GERALT_149 (2).jpg", "GERALT_149 (3).jpg", "GERALT_149 (4).jpg", "GERALT_149 (5).jpg"], "F-149", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP!The Witcher Wild Hunt Geralt #149 VAULTED</h3>
+                        <div class="card-foot">
+                            <strong>R$ 699</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP!The Witcher Wild Hunt Geralt #149 VAULTED", "R$ 699", "POP! GAMES", ["GERALT_149.jpg", "GERALT_149 (1).jpg", "GERALT_149 (2).jpg", "GERALT_149 (3).jpg", "GERALT_149 (4).jpg", "GERALT_149 (5).jpg"], "F-149", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Ghostbuster Jillian Holtzmann #305", "R$ 489", "POP! MOVIES", ["JILLIAN_HOLTZMANN_305.jpg", "JILLIAN_HOLTZMANN_305 (1).jpg", "JILLIAN_HOLTZMANN_305 (2).jpg", "JILLIAN_HOLTZMANN_305 (3).jpg", "JILLIAN_HOLTZMANN_305 (4).jpg", "JILLIAN_HOLTZMANN_305 (5).jpg"], "F-305", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Ghostbuster Jillian Holtzmann #305" src="img/JILLIAN_HOLTZMANN_305.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP! MOVIES</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Ghostbuster Jillian Holtzmann #305", "R$ 489", "POP! MOVIES", ["JILLIAN_HOLTZMANN_305.jpg", "JILLIAN_HOLTZMANN_305 (1).jpg", "JILLIAN_HOLTZMANN_305 (2).jpg", "JILLIAN_HOLTZMANN_305 (3).jpg", "JILLIAN_HOLTZMANN_305 (4).jpg", "JILLIAN_HOLTZMANN_305 (5).jpg"], "F-305", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Ghostbuster Jillian Holtzmann #305</h3>
+                        <div class="card-foot">
+                            <strong>R$ 489</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Ghostbuster Jillian Holtzmann #305", "R$ 489", "POP! MOVIES", ["JILLIAN_HOLTZMANN_305.jpg", "JILLIAN_HOLTZMANN_305 (1).jpg", "JILLIAN_HOLTZMANN_305 (2).jpg", "JILLIAN_HOLTZMANN_305 (3).jpg", "JILLIAN_HOLTZMANN_305 (4).jpg", "JILLIAN_HOLTZMANN_305 (5).jpg"], "F-305", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Kotobukiya Marvel Comics: Iron Man Avengers Now! ArtFX+ Statue", "R$ 1.135", "ARTFX+", ["IRON_MAN_ARTFX_STATUE.jpg", "IRON_MAN_ARTFX_STATUE (1).jpg", "IRON_MAN_ARTFX_STATUE (2).jpg", "IRON_MAN_ARTFX_STATUE (3).jpg", "IRON_MAN_ARTFX_STATUE (4).jpg", "IRON_MAN_ARTFX_STATUE (5).jpg"], "AFX-IM", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Kotobukiya Marvel Comics: Iron Man Avengers Now! ArtFX+ Statue" src="img/IRON_MAN_ARTFX_STATUE.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>ARTFX+</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Kotobukiya Marvel Comics: Iron Man Avengers Now! ArtFX+ Statue", "R$ 1.135", "ARTFX+", ["IRON_MAN_ARTFX_STATUE.jpg", "IRON_MAN_ARTFX_STATUE (1).jpg", "IRON_MAN_ARTFX_STATUE (2).jpg", "IRON_MAN_ARTFX_STATUE (3).jpg", "IRON_MAN_ARTFX_STATUE (4).jpg", "IRON_MAN_ARTFX_STATUE (5).jpg"], "AFX-IM", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Kotobukiya Marvel Comics: Iron Man Avengers Now! ArtFX+ Statue</h3>
+                        <div class="card-foot">
+                            <strong>R$ 1.135</strong>
+                            <button class="details" onclick='abrirDetalhes("Kotobukiya Marvel Comics: Iron Man Avengers Now! ArtFX+ Statue", "R$ 1.135", "ARTFX+", ["IRON_MAN_ARTFX_STATUE.jpg", "IRON_MAN_ARTFX_STATUE (1).jpg", "IRON_MAN_ARTFX_STATUE (2).jpg", "IRON_MAN_ARTFX_STATUE (3).jpg", "IRON_MAN_ARTFX_STATUE (4).jpg", "IRON_MAN_ARTFX_STATUE (5).jpg"], "AFX-IM", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Drag Queens Alaska #02 HOT TOPIC Exclusivo  VAULTED", "R$ 699", "POP!", ["ALASKA_02.jpg", "ALASKA_02 (1).jpg", "ALASKA_02 (2).jpg", "ALASKA_02 (3).jpg", "ALASKA_02 (4).jpg", "ALASKA_02 (5).jpg"], "F-002", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Drag Queens Alaska #02 HOT TOPIC Exclusivo  VAULTED" src="img/ALASKA_02.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Drag Queens Alaska #02 HOT TOPIC Exclusivo  VAULTED", "R$ 699", "POP!", ["ALASKA_02.jpg", "ALASKA_02 (1).jpg", "ALASKA_02 (2).jpg", "ALASKA_02 (3).jpg", "ALASKA_02 (4).jpg", "ALASKA_02 (5).jpg"], "F-002", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Drag Queens Alaska #02 HOT TOPIC Exclusivo  VAULTED</h3>
+                        <div class="card-foot">
+                            <strong>R$ 699</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Drag Queens Alaska #02 HOT TOPIC Exclusivo  VAULTED", "R$ 699", "POP!", ["ALASKA_02.jpg", "ALASKA_02 (1).jpg", "ALASKA_02 (2).jpg", "ALASKA_02 (3).jpg", "ALASKA_02 (4).jpg", "ALASKA_02 (5).jpg"], "F-002", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Drag Queens Jinkx Monsoon #04 HOT TOPIC VAULTED", "R$ 799", "POP!", ["JINKX_MONSOON_04.jpg", "JINKX_MONSOON_04 (1).jpg", "JINKX_MONSOON_04 (2).jpg", "JINKX_MONSOON_04 (3).jpg", "JINKX_MONSOON_04 (4).jpg", "JINKX_MONSOON_04 (5).jpg"], "F-004", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Drag Queens Jinkx Monsoon #04 HOT TOPIC VAULTED" src="img/JINKX_MONSOON_04.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Drag Queens Jinkx Monsoon #04 HOT TOPIC VAULTED", "R$ 799", "POP!", ["JINKX_MONSOON_04.jpg", "JINKX_MONSOON_04 (1).jpg", "JINKX_MONSOON_04 (2).jpg", "JINKX_MONSOON_04 (3).jpg", "JINKX_MONSOON_04 (4).jpg", "JINKX_MONSOON_04 (5).jpg"], "F-004", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Drag Queens Jinkx Monsoon #04 HOT TOPIC VAULTED</h3>
+                        <div class="card-foot">
+                            <strong>R$ 799</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Drag Queens Jinkx Monsoon #04 HOT TOPIC VAULTED", "R$ 799", "POP!", ["JINKX_MONSOON_04.jpg", "JINKX_MONSOON_04 (1).jpg", "JINKX_MONSOON_04 (2).jpg", "JINKX_MONSOON_04 (3).jpg", "JINKX_MONSOON_04 (4).jpg", "JINKX_MONSOON_04 (5).jpg"], "F-004", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Funko POP! Drag Queens Rupaul #01 Exclusivo HOT TOPIC", "R$ 799", "POP!", ["RUPAUL_01.jpg", "RUPAUL_01 (1).jpg", "RUPAUL_01 (2).jpg", "RUPAUL_01 (3).jpg", "RUPAUL_01 (4).jpg", "RUPAUL_01 (5).jpg"], "F-001", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>
+                        <img alt="Funko POP! Drag Queens Rupaul #01 Exclusivo HOT TOPIC" src="img/RUPAUL_01.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>POP!</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Funko POP! Drag Queens Rupaul #01 Exclusivo HOT TOPIC", "R$ 799", "POP!", ["RUPAUL_01.jpg", "RUPAUL_01 (1).jpg", "RUPAUL_01 (2).jpg", "RUPAUL_01 (3).jpg", "RUPAUL_01 (4).jpg", "RUPAUL_01 (5).jpg"], "F-001", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Funko POP! Drag Queens Rupaul #01 Exclusivo HOT TOPIC</h3>
+                        <div class="card-foot">
+                            <strong>R$ 799</strong>
+                            <button class="details" onclick='abrirDetalhes("Funko POP! Drag Queens Rupaul #01 Exclusivo HOT TOPIC", "R$ 799", "POP!", ["RUPAUL_01.jpg", "RUPAUL_01 (1).jpg", "RUPAUL_01 (2).jpg", "RUPAUL_01 (3).jpg", "RUPAUL_01 (4).jpg", "RUPAUL_01 (5).jpg"], "F-001", "NOVO", "Caixa com pequenos amassados e marcas de armazenamento, mas o boneco est\u00e1 perfeito e intacto.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Lemon Meringue + Frapp\u00e9 #133", "R$ 120\u2013180", "GEEK", ["Lemon Meringue + Frapp\u00e9 #133.jpg", "Lemon Meringue + Frapp\u00e9 #133 (2).jpg", "Lemon Meringue + Frapp\u00e9 #133 (3).jpg", "Lemon Meringue + Frapp\u00e9 #133 (4).jpg", "Lemon Meringue + Frapp\u00e9 #133 (5).jpg"], "", "Novo", "Caixa em bom estado de conserva\u00e7\u00e3o.")'>
+                        <img alt="Lemon Meringue + Frappé #133" src="img/Lemon Meringue + Frappé #133.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>GEEK</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Lemon Meringue + Frapp\u00e9 #133", "R$ 120\u2013180", "GEEK", ["Lemon Meringue + Frapp\u00e9 #133.jpg", "Lemon Meringue + Frapp\u00e9 #133 (2).jpg", "Lemon Meringue + Frapp\u00e9 #133 (3).jpg", "Lemon Meringue + Frapp\u00e9 #133 (4).jpg", "Lemon Meringue + Frapp\u00e9 #133 (5).jpg"], "", "Novo", "Caixa em bom estado de conserva\u00e7\u00e3o.")'>Lemon Meringue + Frappé #133</h3>
+                        <div class="card-foot">
+                            <strong>R$ 120–180</strong>
+                            <button class="details" onclick='abrirDetalhes("Lemon Meringue + Frapp\u00e9 #133", "R$ 120\u2013180", "GEEK", ["Lemon Meringue + Frapp\u00e9 #133.jpg", "Lemon Meringue + Frapp\u00e9 #133 (2).jpg", "Lemon Meringue + Frapp\u00e9 #133 (3).jpg", "Lemon Meringue + Frapp\u00e9 #133 (4).jpg", "Lemon Meringue + Frapp\u00e9 #133 (5).jpg"], "", "Novo", "Caixa em bom estado de conserva\u00e7\u00e3o.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes("Orange Blossom + Marmalade #134", "R$ 150\u2013220", "GEEK", ["Orange Blossom + Marmalade #134.jpg", "Orange Blossom + Marmalade #134 (2).jpg", "Orange Blossom + Marmalade #134 (3).jpg", "Orange Blossom + Marmalade #134 (4).jpg", "Orange Blossom + Marmalade #134 (5).jpg"], "", "Novo", "Caixa em bom estado de conserva\u00e7\u00e3o.")'>
+                        <img alt="Orange Blossom + Marmalade #134" src="img/Orange Blossom + Marmalade #134.jpg" style="object-fit: contain; width: 100%; height: 100%;">
+                        <i class="status disponível">Disponível</i>
+                    </div>
+                    <div class="card-body">
+                        <div class="meta"><span>GEEK</span></div>
+                        <h3 class="card-title" style="cursor: pointer; font-size: 20px; font-weight: 800; margin: 10px 0 4px;" onclick='abrirDetalhes("Orange Blossom + Marmalade #134", "R$ 150\u2013220", "GEEK", ["Orange Blossom + Marmalade #134.jpg", "Orange Blossom + Marmalade #134 (2).jpg", "Orange Blossom + Marmalade #134 (3).jpg", "Orange Blossom + Marmalade #134 (4).jpg", "Orange Blossom + Marmalade #134 (5).jpg"], "", "Novo", "Caixa em bom estado de conserva\u00e7\u00e3o.")'>Orange Blossom + Marmalade #134</h3>
+                        <div class="card-foot">
+                            <strong>R$ 150–220</strong>
+                            <button class="details" onclick='abrirDetalhes("Orange Blossom + Marmalade #134", "R$ 150\u2013220", "GEEK", ["Orange Blossom + Marmalade #134.jpg", "Orange Blossom + Marmalade #134 (2).jpg", "Orange Blossom + Marmalade #134 (3).jpg", "Orange Blossom + Marmalade #134 (4).jpg", "Orange Blossom + Marmalade #134 (5).jpg"], "", "Novo", "Caixa em bom estado de conserva\u00e7\u00e3o.")'>Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+    
+            </div>
+        </section>
+    </main>
+    
+    <!-- MODAL DE DETALHES -->
+    <dialog id="modalDetalhes" class="product-dialog">
+        <button onclick="fecharDetalhes()" style="position: absolute; top: 16px; right: 16px; z-index: 20; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #111;">✕</button>
+        
+        <div class="modal-container">
+            <!-- Lado Esquerdo -->
+            <div style="background: #f7f6f2; padding: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; box-sizing: border-box;">
+                <div id="modalImagemContainer" style="width: 100%; height: 360px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; cursor: zoom-in;">
+                    <button id="btnAnterior" onclick="mudarFoto(-1)" style="position: absolute; left: 0; background: rgba(0,0,0,0.15); border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; color: #111; z-index: 10;">‹</button>
+                    
+                    <img id="modalImagemPrincipal" src="" alt="Produto" style="max-width: 90%; max-height: 100%; object-fit: contain; transition: transform 0.1s ease-out;">
+                    
+                    <button id="btnProximo" onclick="mudarFoto(1)" style="position: absolute; right: 0; background: rgba(0,0,0,0.15); border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; color: #111; z-index: 10;">›</button>
+                </div>
+                
+                <div id="modalMiniaturas" style="display: flex; gap: 10px; margin-top: 24px; overflow-x: auto; max-width: 100%; padding-bottom: 8px;"></div>
+            </div>
+
+            <!-- Lado Direito -->
+            <div style="background: #fff; padding: 50px 40px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+               <div>
+                   <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+                       <span id="modalBadgeCat" style="background: #fdf8eb; color: #926d24; font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">MARVEL</span>
+                   </div>
+                   
+                   <h2 id="modalNome" style="font-size: 32px; font-weight: 500; color: #111; line-height: 1.1; margin: 0 0 12px 0; letter-spacing: -0.5px;">Nome do Produto</h2>
+                   <p id="modalCodigo" style="font-size: 13px; color: #888; margin: 0 0 24px 0;"></p>
+                   
+                   <div id="modalPreco" style="font-size: 28px; font-weight: 700; color: #111; margin-bottom: 32px;">R$ 0,00</div>
+                   
+                   <div style="border-top: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea; padding: 20px 0; margin-bottom: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                       <div>
+                           <span style="display: block; font-size: 11px; font-weight: 700; color: #926d24; text-transform: uppercase; margin-bottom: 6px;">Status</span>
+                           <span style="font-size: 15px; color: #333;">Disponível</span>
+                       </div>
+                       <div>
+                           <span style="display: block; font-size: 11px; font-weight: 700; color: #926d24; text-transform: uppercase; margin-bottom: 6px;">Estado</span>
+                           <span id="modalEstado" style="font-size: 15px; color: #333;">Novo</span>
+                       </div>
+                   </div>
+                   
+                   <div style="margin-bottom: 32px;">
+                       <span style="display: block; font-size: 11px; font-weight: 700; color: #926d24; text-transform: uppercase; margin-bottom: 6px;">Condição da caixa</span>
+                       <p id="modalCondicao" style="font-size: 15px; color: #333; margin: 0; line-height: 1.5;"></p>
+                   </div>
+               </div>
+               
+               <div style="margin-top: auto;">
+                   <button id="btnTenhoInteresse" style="background: #111; color: #fff; border: none; border-radius: 8px; width: 100%; height: 54px; font-size: 15px; font-weight: 600; cursor: pointer;">Tenho Interesse</button>
+               </div>
+            </div>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="brand"><b>AG</b><span>ACERVO GEEK</span></div>
+        <p>Catálogo de colecionáveis • 2026</p>
+    </footer>
+
+    <script>
+        // Define o caminho das imagens para o site estático
+        window.caminhoImagens = 'img/';
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

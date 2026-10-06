@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin — Acervo Geek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f5f3ee] text-[#121212] font-sans p-6">
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl border border-[#dedad2]">
+        <div class="flex justify-between items-center mb-6">
+            <h1 id="tituloPainel" class="text-2xl font-extrabold">Cadastrar Novo Produto</h1>
+            <a href="/" class="text-sm font-bold text-[#b17d12] hover:underline">Ver Catálogo ↗</a>
+        </div>
+
+        <!-- Formulário adaptado para Cadastro e Edição -->
+        <form method="POST" class="space-y-4 mb-10 pb-8 border-b border-gray-200">
+            <!-- Campos ocultos para controlar a ação (cadastrar ou editar) -->
+            <input type="hidden" name="acao" id="formAcao" value="cadastrar">
+            <input type="hidden" name="codigo_original" id="codigoOriginal">
+
+            <div>
+                <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Nome do Produto</label>
+                <input type="text" name="nome" id="inputNome" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black">
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Categoria (Ex: Funko Pop!)</label>
+                    <input type="text" name="categoria" id="inputCategoria" placeholder="Ex: Funko Pop!" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Universo / Franquia</label>
+                    <input type="text" name="universo" id="inputUniverso" placeholder="Ex: Marvel" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Código do Item</label>
+                    <input type="text" name="codigo" id="inputCodigo" placeholder="Ex: #45" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Estado</label>
+                    <select name="estado" id="inputEstado" class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:border-black">
+                        <option value="Novo">Novo</option>
+                        <option value="Usado">Usado</option>
+                        <option value="Colecionador">Colecionador</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Nome da Foto (na pasta img/)</label>
+                <input type="text" name="foto" id="inputFoto" placeholder="exemplo.jpg" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black">
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Condição da Caixa</label>
+                <textarea name="condicao" id="inputCondicao" rows="2" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black">Caixa em bom estado de conservação.</textarea>
+            </div>
+
+            <div class="flex gap-4">
+                <button type="submit" id="btnSalvar" class="flex-1 bg-black text-white font-bold py-3 rounded-lg hover:bg-gray-800 transition cursor-pointer">
+                    Salvar Produto na Planilha
+                </button>
+                <button type="button" onclick="limparFormulario()" class="hidden id-btn-cancelar bg-gray-200 text-gray-700 font-bold px-6 py-3 rounded-lg hover:bg-gray-300 transition cursor-pointer" id="btnCancelar">
+                    Cancelar Edição
+                </button>
+            </div>
+        </form>
+
+        <!-- Seção de Listagem dos Produtos para Edição -->
+        <h2 class="text-xl font-bold mb-4">Gerenciar Produtos Cadastrados</h2>
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-left">
+                <thead>
+                    <tr class="bg-gray-100 border-b border-gray-200 text-xs uppercase text-gray-600">
+                        <th class="p-3">Nome</th>
+                        <th class="p-3">Preço</th>
+                        <th class="p-3">Código</th>
+                        <th class="p-3 text-center">Ações</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200 text-sm">
+                    {% for prod in produtos %}
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-3 font-medium">{{ prod['Nome do Produto'] }}</td>
+                        <td class="p-3">{{ prod['Preço (R$)'] }}</td>
+                        <td class="p-3 text-gray-500">{{ prod['Código'] }}</td>
+                        <td class="p-3 text-center space-x-2">
+                        <button type="button" onclick="preencherEdicao(
+                            '{{ prod['Nome do Produto'] }}',
+                            '{{ prod['Preço (R$)'] }}',
+                            '{{ prod['Categoria'] }}',
+                            '{{ prod['Franquia'] }}',
+                            '{{ prod['Código'] }}',
+                            '{{ prod['Estado'] }}',
+                            '{{ prod['Condição da Caixa'] | replace('\n', ' ') }}',
+                            '{{ prod['Foto'] }}'
+                        )" class="bg-[#b17d12] text-white px-3 py-1.5 rounded-lg text-xs font-bold hover:opacity-90 transition cursor-pointer">
+                            Editar
+                        </button>
+
+                        <button type="button" onclick="excluirProduto('{{ prod['Código'] }}', '{{ prod['Nome do Produto'] }}')" class="bg-red-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-red-700 transition cursor-pointer">
+                            Excluir
+                        </button>
+                    </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="4" class="p-4 text-center text-gray-400">Nenhum produto cadastrado ainda.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function preencherEdicao(nome, preco, categoria, franquia, codigo, estado, condicao, foto) {
+            document.getElementById('formAcao').value = 'editar';
+            document.getElementById('codigoOriginal').value = codigo;
+            
+            document.getElementById('inputNome').value = nome;
+            document.getElementById('inputPreco').value = preco;
+            document.getElementById('inputCategoria').value = categoria;
+            document.getElementById('inputFranquia').value = franquia; // Adicionado aqui
+            document.getElementById('inputCodigo').value = codigo;
+            document.getElementById('inputEstado').value = estado;
+            document.getElementById('inputCondicao').value = condicao;
+            document.getElementById('inputFoto').value = foto;
+            
+            document.getElementById('tituloPainel').innerText = 'Editar Produto';
+            document.getElementById('btnSalvar').innerText = 'Atualizar Produto';
+            document.getElementById('btnCancelar').classList.remove('hidden');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function limparFormulario() {
+            document.getElementById('formAcao').value = 'cadastrar';
+            document.getElementById('codigoOriginal').value = '';
+            
+            document.getElementById('inputNome').value = '';
+            document.getElementById('inputPreco').value = '';
+            document.getElementById('inputCategoria').value = '';
+            document.getElementById('inputCodigo').value = '';
+            document.getElementById('inputEstado').value = 'Novo';
+            document.getElementById('inputCondicao').value = 'Caixa em bom estado de conservação.';
+            document.getElementById('inputFoto').value = '';
+            
+            document.getElementById('tituloPainel').innerText = 'Cadastrar Novo Produto';
+            document.getElementById('btnSalvar').innerText = 'Salvar Produto na Planilha';
+            document.getElementById('btnCancelar').classList.add('hidden');
+        }
+
+        function excluirProduto(codigo, nome) {
+        if (confirm(`Tem certeza que deseja excluir o produto "${nome}"?`)) {
+            document.getElementById('formAcao').value = 'excluir';
+            document.getElementById('codigoOriginal').value = codigo;
+            
+            // Submete o formulário principal executando a exclusão
+            document.querySelector('form').submit();
+        }
+}
+    </script>
+</body>
+</html>
