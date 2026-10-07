@@ -34,7 +34,7 @@ html = f"""<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acervo Geek — Catálogo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style.css">
     <style>
         dialog.product-dialog {{
             padding: 0;
@@ -71,14 +71,20 @@ html = f"""<!DOCTYPE html>
         <a class="nav-link" href="#catalogo">Ver coleção ↓</a>
     </header>
     <main>
-        <section class="hero" id="inicio">
-            <div class="hero-copy">
-                <span class="eyebrow">PEÇAS DE COLECIONADOR</span>
-                <h1>Uma coleção inteira procurando novas prateleiras.</h1>
-                <p>Funkos, action figures, estátuas e edições especiais de universos inesquecíveis.</p>
-                <a class="button gold" href="#catalogo">Explorar o acervo ↘</a>
+        <section style="display: flex; flex-wrap: wrap; background-color: #111111; margin: 0; padding: 0; align-items: stretch;">
+            <!-- Lado Esquerdo -->
+            <div style="flex: 0 0 50%; display: flex; flex-direction: column; justify-content: center; padding: 4rem 3rem 4rem 10%; box-sizing: border-box; min-width: 300px;">
+                <div style="max-width: 580px; text-align: left;">
+                    <span class="eyebrow" style="margin-bottom: 12px; display: block; font-weight: 800; font-size: 0.8rem; letter-spacing: 1px;">PEÇAS DE COLECIONADOR</span>
+                    <h1 style="margin: 0 0 20px 0; font-size: 4rem; font-weight: 400; line-height: 1; color: #ffffff; letter-spacing: -1px; transform: scaleY(1.15); transform-origin: top left; display: block;">Uma coleção inteira procurando novas prateleiras.</h1>
+                    <p style="margin: 0 0 24px 0; font-size: 1.25rem; color: #d1d5db; line-height: 1.5;">Funkos, action figures, estátuas e edições especiais de universos inesquecíveis.</p>
+                    <a class="button gold" href="#catalogo" style="display: inline-block; padding: 12px 26px; font-size: 1rem;">Explorar o acervo ↘</a>
+                </div>
             </div>
-            <div class="hero-photo" role="img" aria-label="Coleção de itens geek"></div>
+
+            <!-- Lado Direito -->
+            <div style="flex: 1 1 50%; min-height: 545px; min-width: 320px; background-image: url('static/img/prateleira_real.jpg'); background-size: cover; background-position: center;">
+            </div>
         </section>
         
         <section class="catalog" id="catalogo">
@@ -143,7 +149,7 @@ for index, row in df_preenchido.iterrows():
     card = f"""
                 <article class="card">
                     <div class="photo" style="cursor: pointer;" onclick='abrirDetalhes({nome_j}, {preco_j}, {cat_j}, {fotos_j}, {codigo_j}, {estado_j}, {condicao_j})'>
-                        <img alt="{nome}" src="img/{foto_capa}" style="object-fit: contain; width: 100%; height: 100%;">
+                        <img alt="{nome}" src="static/img/{foto_capa}" style="object-fit: contain; width: 100%; height: 100%;">
                         <i class="status disponível">Disponível</i>
                     </div>
                     <div class="card-body">
@@ -224,9 +230,9 @@ html += """
 
     <script>
         // Define o caminho das imagens para o site estático
-        window.caminhoImagens = 'img/';
+        window.caminhoImagens = 'static/img/';
     </script>
-    <script src="script.js"></script>
+    <script src="static/script.js"></script>
 </body>
 </html>
 """
